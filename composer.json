@@ -1,8 +1,8 @@
 {
   "name": "trick-e/tevolution-directory-plugin",
-  "description": "Cornerstone Wordpress Plugin for Directory, by Templatic.",
+  "description": "Directory Wordpress Plugin for Directory, by Templatic.",
   "license": "proprietary",
-  "keywords": ["wordpress","plugin","plugins","tevolution","directory-theme", "templatic"],
+  "keywords": ["wordpress","plugin","plugins","tevolution", "directory-plugin","directory-theme", "templatic"],
   "authors": [
     {
       "name": "Christopher Legan",

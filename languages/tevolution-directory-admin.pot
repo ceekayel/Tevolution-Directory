@@ -1,0 +1,888 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Tevolution-Directory\n"
+"POT-Creation-Date: 2014-08-20 11:06+0530\n"
+"PO-Revision-Date: 2014-08-20 11:06+0530\n"
+"Last-Translator: \n"
+"Language-Team: Templatic <upendra@templatic.com>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.7\n"
+"X-Poedit-Basepath: D:\\wamp\\www\\translationtesting\\wp-content\\plugins"
+"\\Tevolution-Directory\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __\n"
+"X-Poedit-SearchPath-0: D:\\wamp\\www\\translationtesting\\wp-content\\plugins"
+"\\Tevolution-Directory\n"
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/bundle_box.php:20
+msgid "Tevolution Directory"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/bundle_box.php:24
+msgid ""
+"A directory module from Templatic that helps you to enhance your website "
+"with some brilliant features like showing map, places, sorting places with "
+"the help of map etc. This feature gives you freedom and flexibility to add,"
+"sort and monitor your places from your back-end. "
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/bundle_box.php:29
+msgid "Activate &rarr;"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/bundle_box.php:34
+msgid "Deactivate "
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/bundle_box.php:35
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/directory.php:100
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/directory.php:104
+msgid "Settings"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/directory.php:91
+#, php-format
+msgid ""
+"You have not activated the base plugin %s. Please activate it to use "
+"Tevolution-Directory plugin."
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/directory.php:178
+msgid "System might facing the problem in include "
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_functions.php:58
+msgid "Listing Category Pages - Below Header"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_functions.php:58
+msgid ""
+"Use this area to show widgets between the secondary navigation bar and main "
+"content area on Listing category pages."
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_functions.php:464
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/listing/listing.php:14
+msgid "Edit"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_functions.php:483
+msgid "Add to favorites"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_functions.php:484
+msgid "Added"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_functions.php:524
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_functions.php:554
+msgid " and "
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_functions.php:535
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_single_functions.php:290
+#, php-format
+msgid "Posted In %s"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_functions.php:566
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_single_functions.php:325
+#, php-format
+msgid "Tagged In %s"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_functions.php:583
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_functions.php:688
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:677
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:873
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:631
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:971
+msgid "review"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_functions.php:583
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_functions.php:688
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:677
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:873
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:631
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:971
+msgid "reviews"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_functions.php:818
+msgid "Map"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_functions.php:845
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:306
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:311
+msgid "Featured"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_functions.php:924
+msgid "Sorting options for home page"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:897
+msgid "We have found these results for listings matching your search criteria."
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_single_functions.php:10
+msgid "Posted In "
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_single_functions.php:18
+msgid "Tagged In "
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_single_functions.php:190
+msgid "Listing Information"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_single_functions.php:391
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_single_functions.php:393
+msgid "From"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_single_functions.php:391
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_single_functions.php:405
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_single_functions.php:418
+msgid "To"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_single_functions.php:414
+msgid "Date:"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_single_functions.php:418
+msgid "Timing:"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/manage_category_customfields.php:55
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/manage_category_customfields.php:89
+msgid "Map Marker"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/manage_category_customfields.php:58
+msgid "Or"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/manage_category_customfields.php:60
+msgid "Browse"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/manage_category_customfields.php:61
+msgid ""
+"It will appear on the homepage Google map for listings placed in this "
+"category. "
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/manage_category_customfields.php:91
+msgid "Events"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/manage_category_customfields.php:93
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/listing/listing.php:9
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/listing/listing.php:10
+msgid "Listings"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/widget_functions.php:22
+msgid ""
+"Showcase posts from any post type, including those created by you. Featured "
+"posts are displayed at the top. Works best in the Homepage - Main Content "
+"area."
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/widget_functions.php:23
+msgid "T &rarr; Homepage Display Posts"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/widget_functions.php:225
+msgid "Featured Listing"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/widget_functions.php:225
+msgid "View All"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/widget_functions.php:237
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:238
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:400
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:760
+msgid "Title"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/widget_functions.php:242
+msgid "View All Text"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/widget_functions.php:247
+msgid "View All Link URL: (ex.http://templatic.com/events)"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/widget_functions.php:252
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:257
+msgid "Number of posts"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/widget_functions.php:257
+msgid "View"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/widget_functions.php:259
+msgid "List view"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/widget_functions.php:260
+msgid "Grid view"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/widget_functions.php:265
+msgid "Post Type"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/widget_functions.php:276
+msgid "Limit content to"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/widget_functions.php:276
+msgid "characters"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/widget_functions.php:279
+msgid "Categories: (<code>SLUGs</code> separated by commas)"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/direction_map_widget.php:7
+msgid ""
+"Shows a map of the posts location. By entering their address, visitors can "
+"also get directions to the location. Use the widget in detail page sidebar "
+"areas."
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/direction_map_widget.php:8
+msgid "T &rarr; Detail Page Map"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/direction_map_widget.php:55
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:402
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:808
+msgid ""
+"Map Height <small>(default height: 425px) to change, only enter a numeric "
+"value.)</small>"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:16
+msgid "Show all posts on category map"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:18
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:185
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:192
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:200
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:208
+msgid "Enable"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:19
+msgid ""
+"With large categories this can significantly increase category page load "
+"time. When this option is disabled, the map will only show posts from the "
+"current page."
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:33
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:59
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:82
+msgid "Map Settings"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:36
+msgid "Show pinpoint option"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:41
+#, php-format
+msgid ""
+"Pinpoint button allows you to focus the map on a specific entry. It will "
+"only work with the map listing widget so make sure you uncheck \"Show Map "
+"View\" in %s"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:45
+msgid "Pinpoint button activates on"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:47
+msgid "Mouse hover"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:49
+#, php-format
+msgid ""
+"\"Mouse hover\" option will not work if you have \"Show map view in category "
+"pages\" option enabled in %s"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:83
+msgid ""
+"Use this settings area to tweak the maps on your site. If you happen to have "
+"\"Tevolution - Location Manager\" disabled, use the \"Single city map "
+"settings\" area to define map properties for your single city."
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:89
+msgid "Settings saved"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:114
+msgid "Single city map settings"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:118
+msgid "City name"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:122
+msgid "City latitude"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:123
+msgid ""
+"Enter the latitude for the city defined above. Generate the value using <a "
+"href=\"http://itouchmap.com/latlong.html\" target=\"_blank\">this website</"
+"a>."
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:126
+msgid "City longitude"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:127
+msgid ""
+"Enter the longitude for the city defined above. Generate the value using <a "
+"href=\"http://itouchmap.com/latlong.html\" target=\"_blank\">this website</"
+"a>."
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:130
+msgid "Map type"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:133
+msgid "Road Map"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:135
+msgid "Terrain Map"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:137
+msgid "Satellite Map"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:139
+msgid ""
+"The selection made here will affect your homepage and category page map."
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:144
+msgid "Map display"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:147
+msgid "According to Map Scaling factor"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:148
+msgid "Fit all available listings"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:149
+msgid ""
+"If \"Fit all available listings\" is selected the map scaling factor set "
+"above is ignored. The zoom factor will be set automatically so that all "
+"listings fit the screen."
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:161
+msgid "Map scaling factor"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:171
+msgid ""
+"Set to zoom level for the map. The higher the number, the larger the zoom. "
+"To show a city area set the factor to around 13."
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:178
+msgid "Other map settings"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:183
+msgid "Show map view in category pages"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:186
+msgid ""
+"Disable this option only if you want to use a widget to display the map on "
+"category pages. Enabling the option will prevent map widgets from working."
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:190
+msgid "Show \"Map\" tab in detail pages"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:193
+msgid ""
+"Disable this only if you want to use a widget to display a map on the detail "
+"page. This option prevents map widgets on detail pages from working."
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:198
+msgid "Hide maps on mobile devices"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:201
+msgid ""
+"With this option enabled, maps won&rsquo;t be shown on mobile phones and "
+"tablets."
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:206
+msgid "Show map in full width"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:209
+msgid ""
+"Stretches the homepage map across the full width of the screen. This setting "
+"will be applied to any widget inserted in the \"Home Page Slider\" area."
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:218
+msgid "Save Changes"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:244
+msgid ""
+"Use it while operating a single city. Edit the map location in Tevolution "
+"&raquo; map settings. Widget works best inside the Homepage Slider or "
+"Homepage - Main Content area."
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:245
+msgid "T &rarr; Homepage Map - single city"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:457
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:815
+msgid "Disable Clustering"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:511
+msgid ""
+"Show a map on category pages while operating a single city. Use in category "
+"page sidebar and category page - below header areas."
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:512
+msgid "T &rarr; Category Page Map - single city"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:1095
+msgid "Select All"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:1195
+#, php-format
+msgid "There is no categories in %s"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:1209
+msgid "Please select any post type."
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:24
+msgid ""
+"Display posts that are in the vicinity of the post that is currently "
+"displayed. Use in detail page sidebar areas."
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:25
+msgid "T &rarr; In The Neighborhood"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:32
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:219
+msgid "Nearest Listing"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:243
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:405
+msgid "Select Post:"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:265
+msgid "<b>Show list by distance?</b>"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:271
+msgid "Show Listings From"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:273
+msgid "So Far Away"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:274
+msgid "Far Away"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:275
+msgid "At Some Distance"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:276
+msgid "Nearer"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:277
+msgid "Very Near"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:284
+msgid "Select Distance"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:286
+msgid "1"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:287
+msgid "5"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:288
+msgid "10"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:289
+msgid "100"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:290
+msgid "1000"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:291
+msgid "5000"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:296
+msgid "Display By"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:298
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:325
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:426
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:768
+msgid "Kilometers"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:299
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:325
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:427
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:767
+msgid "Miles"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:315
+msgid ""
+"Enter an address to get a list of nearby posts. Use in header and sidebar "
+"widget areas."
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:316
+msgid "T &rarr; Search by Address"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:327
+msgid "What?"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:355
+msgid "Mile"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:355
+msgid "Kilometer"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:420
+msgid "<b>Search By Distance?</b>"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:424
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:765
+msgid "Search By"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:456
+msgid ""
+"Shows a list of all categories and their sub-categories. Works best in main "
+"content and subsidiary areas."
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:457
+msgid "T &rarr; All Categories List"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:591
+msgid "Invalid Category."
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:612
+msgid "Title:"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:617
+msgid "Post Type:"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:628
+msgid "Category Level"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:640
+msgid "Number of child categories"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:646
+msgid "Hide empty categories"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:659
+msgid ""
+"Search through nearby posts by setting a range. Use in category page sidebar "
+"areas."
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:660
+msgid "T &rarr; Search by Miles Range"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:672
+#, php-format
+msgid "Find a %s"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:773
+msgid "Max Range"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/listing/install.php:22
+msgid ""
+"You have no listing post type now but your directory is in active status so "
+"you can generate listing post type again. "
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/listing/install.php:23
+msgid "Generate Listing Taxonomy"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/listing/install.php:387
+msgid "Please Enter Address"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/listing/install.php:937
+msgid "Please enter phone number"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/listing/listing.php:11
+msgid "Listing"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/listing/listing.php:12
+msgid "Add Listing"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/listing/listing.php:13
+msgid "Add new listing"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/listing/listing.php:15
+msgid "Edit listing"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/listing/listing.php:16
+msgid "New listing"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/listing/listing.php:17
+msgid "View listing"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/listing/listing.php:18
+msgid "Search listing"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/listing/listing.php:19
+msgid "No listing found"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/listing/listing.php:20
+msgid "No listing found in trash"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/listing/listing.php:21
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/listing/listing.php:22
+msgid "Listing Categories"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/listing/listing.php:23
+msgid "Category"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/listing/listing.php:24
+msgid "Search category"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/listing/listing.php:25
+msgid "Popular categories"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/listing/listing.php:26
+msgid "All categories"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/listing/listing.php:27
+msgid "Parent category"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/listing/listing.php:28
+msgid "Parent category:"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/listing/listing.php:29
+msgid "Edit category"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/listing/listing.php:30
+msgid "Update category"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/listing/listing.php:31
+msgid "Add new category"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/listing/listing.php:32
+msgid "New category name"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/listing/listing.php:33
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/listing/listing.php:34
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/listing/listing.php:35
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/listing/listing.php:36
+msgid "Listing Tags"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/listing/listing.php:37
+msgid "Popular listing tags"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/listing/listing.php:38
+msgid "All listing tags"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/listing/listing.php:39
+msgid "Parent listing tags"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/listing/listing.php:40
+msgid "Parent listing tags:"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/listing/listing.php:41
+msgid "Edit listing tags"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/listing/listing.php:42
+msgid "Update listing tags"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/listing/listing.php:43
+msgid "Add new listing tags"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/listing/listing.php:44
+msgid "New listing tag name"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/templates/directory-listing-single-content.php:295
+msgid "Other Details"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/templates/directory-listing-single-content.php:324
+msgid "Visited"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/templates/directory-listing-single-content.php:324
+msgid "times"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/templates/directory-listing-single-content.php:325
+msgid "Visits today"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/templates/single-listing.php:59
+msgid "Review"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/templates/single-listing.php:59
+msgid "Reviews"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/templatic_login.php:4
+msgid "Tevolution Update"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/templatic_login.php:84
+msgid ""
+"Enter your Templatic account credentials to proceed with the update. These "
+"are the same details you use for the member area."
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/templatic_login.php:97
+msgid "User Name"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/templatic_login.php:101
+msgid "Password"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/templatic_login.php:106
+msgid "Cancel"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/wp-updates-plugin.php:44
+msgid "There is a new version of Tevolution-Directory plugin available "
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/wp-updates-plugin.php:49
+msgid " <a href=\""
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/wp-updates-plugin.php:91
+msgid ""
+"An Unexpected HTTP Error occurred during the API request.</p> <p><a href=\"?"
+"\" onclick=\"document.location.reload(); return false;\">Try again</a>"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/wp-updates-plugin.php:95
+msgid "An unknown error occurred"
+msgstr ""

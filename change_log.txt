@@ -1,0 +1,631 @@
+Templatic Plugin - Tevolution-Directory (Version 2.0.9) 
+============================================================================================
+
+19th June 2015 (Version 2.0.9)
+--------------------------------------------------------------------------------------------
+Improved : Wp-rest-api plugin which is third party plugin, When active this plugin automatic 
+	   json api functionality going to work.
+           Make effect in all category listing widget.
+--------------------------------------------------------------------------------------------
+google-maps\widgets.php
+--------------------------------------------------------------------------------------------
+
+Fix - Rating Design Isssue on Detail page.
+
+Fix - Image size issue on home page and archive page.
+
+Fix - Archive Page Multicity Full Width Map & Main Banner Map Overlapping Issue.
+
+Fix - Sorting options were not working with additonal custome post type.
+
+Fix - For Site speed optimize asychronize javascript.
+--------------------------------------------------------------------------------------------
+
+28th May 2015 (Version 2.0.8)
+--------------------------------------------------------------------------------------------
+Fix - Page redirection issue, on search page.
+
+Fix - Miles range search problem when no address is added without location manager.
+
+Fix - Related listing shows advertisement, if option selected to shows on detail page through backend.
+
+Fix - Near by widget was not working properly.
+
+Fix - when multiple widget input than select all check box, if you put one widget, multiple times in same area the first widget behaves correctly, others not.
+--------------------------------------------------------------------------------------------
+
+24th April 2015 (Version 2.0.7)
+--------------------------------------------------------------------------------------------
+Fix - Change the order of listing feature listing first in random list view.
+
+Fix - Feature listing first in alphabetic order.
+
+Fix - on preview page header fields does not fetched.
+
+Fix - Listing became featured before price package is updated.
+
+Fix - Above content and below content widget area not called on archive pages.
+
+Fix - Added condition for category shown on detail pages for additional post type.
+
+Fix - Listing tag page does not show the listing below header widget area.
+
+Fix - WordPress 4.2 & Security related changes.
+--------------------------------------------------------------------------------------------
+
+18th March 2015 (Version 2.0.6)
+--------------------------------------------------------------------------------------------
+Fix - Custome field post excerpt was not saving on backend.
+
+Fix - Multi city shows two times on category page at front end.
+
+Fix - Display overview tab only if post content and image is there.
+
+Fix - Mileswise range was not working with custom post type.
+
+Fix - If we disable the map from detail page, the content tab is also disable.
+
+Fix - After the search on category pages add to favorite and comments info is missing.
+
+Fix - Posted in was not showing on aditional post type detail page.
+--------------------------------------------------------------------------------------------
+
+18th February 2015 (Version 2.0.5)
+--------------------------------------------------------------------------------------------
+Fix - Excerpt and content custome fields can't change the heading type.
+
+Fix - Events linked to this listing was not showing properly in mobile view. 
+
+Fix - Custome fields sort order was not working on detail page.
+
+Fix - Month does not translate on event tab of listing.
+
+Fix - Some extra space when home page featured listing widget does not have any post.
+
+Fix - Listing page map show even in list and grid view.
+
+Fix - Read more link shows twice on home page featured listing.
+-------------------------------------------------------------------------------------------
+ 
+2nd February 2015 (Version 2.0.4)
+-------------------------------------------------------------------------------------------
+Fix - On listing preview page video tabs shows two time if tab manager plugin is activated.
+
+Fix - Move "Home page display posts" widget from widgets.php file to google-maps fodler to make it work wwith tevolution's all addons.
+
+Fix - Wuhe we go on archive page, the map inside below header area was not display.
+
+Fix - When we custom post type it show after header widget area of directory.
+
+Fix - Post excerpt field was not display on category pages of other page 
+
+Fix - FIlter was not working properly on tags listing page.
+
+Add - Pagination for filter results whem filter with "Search by Miles Range" widget.
+
+Fix - The default fields like Title,Category,image,excerpt etc should not be deletable.
+
+Fix - Kilometer wise search was not working properly.
+
+-----------------------------------------------------------------------------------------------
+
+25th December 2014 (Version 2.0.3)
+-------------------------------------------------------------------------------------------------------
+Fix - additional post type tag page was broken
+
+Fix - Content in Mobile view
+
+Fix - Sample CSV link in Bulk export
+
+Fix - Taxonomy Lable changes to default
+
+Fix - Listing tag page for taxonomy
+
+Fix - Author page tab when listing post is deleted
+
+Fix - Search
+
+Fix - Heading types resets
+
+Fix - Homepage display posts widget.
+
+------------------------------------------------------------------------------------------------------
+
+29th November 2014 (Version 2.0.2)
+-------------------------------------------------------------------------------------------------------
+Fix: Option to regenerate Listing post type once it is deleted was not working
+
+Improvements: Sample data content
+
+Fix: Custom fields were not getting displayed if another post type was selected in Homepage Display Posts widget
+
+Fix: Home page mobile view was not looking good for a new post type created with tevolution
+
+Fix: Renamed some transients because the longer names were not getting saved on some servers due to a limited length n database
+
+Fix: Some translation issues
+
+Fix: PHP noticed on plugin activation
+
+Fix: Category name was not showing on category pages in mobile view
+-------------------------------------------------------------------------------------------------------
+
+11th November 2014 (Version 2.0.1)
+---------------------------------------------------------------------------------
+Fix - home page single city page map category issue using WPML language wise.
+
+Fix - In certain conditions, when user go in plugins.php its take some time to load.
+
+
+28th October 2014 (Version 2.0)
+----------------------------------------------------------------------------------
+- Optimize the code and remove unnecessary functions.
+- Add the hooks for more flexibilities.
+- Use common html for all listing page and detail page of listing.
+- Add sorting options in "home page featured listings it self".
+- improvement for the "Search by Miles Range" widget.
+- Use admin-Ajax instead of custom ajax.
+- Optimize the css
+
+10th July 2014 (Version 1.0.13)
+----------------------------------------------------------------------------------
+New:  Displayed post type description on archive page of that post type 
+----------------------------------------------------------------------------------
+templates/archive-listing.php
+directory_page_templates.php
+
+--------------------------------------------
+Improvement: Added new hooks for flexibility
+----------------------------------------------
+functions/directory_filters.php
+functions/directory_functions.php
+
+-------------------------------------------------------------------
+New: Added tagwise search in Searchby Adderess widget
+-------------------------------------------------------------------
+functions/directory_filters.php
+
+--------------------------------------------
+Improvement - Added Target blank for hyperlinks
+----------------------------------------------
+templates/single-listing.php
+functions/directory_listing_functions.php
+
+--------------------------------------------
+Improvement - Templatic auto updates login form
+----------------------------------------------
+image/templatic.png
+templatic_login.php
+
+----------------------------------------------------------------------------------------
+Change - Show comment count only if comment options are enable from backend
+----------------------------------------------------------------------------------------
+functions/directory_listing_functions.php
+---------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Fix: On detail page Date custom field was not displaying as the date format selected in back end
+----------------------------------------------------------------------------------------------------
+templates/directory-listing-single-content.php
+
+----------------------------------------------------------------------------------------------------
+Fix: archive page structure was not same as category page.
+----------------------------------------------------------------------------------------------------
+templates/archive-listing.php
+
+----------------------------------------------------------------------------------------------------
+Fix: Detail page label overlap with title
+----------------------------------------------------------------------------------------------------
+css/directory.css
+
+----------------------------------------------------------------------------------------------------
+Fix:  On Archive page Map, category wise marker was not working, wasn't working with Global location
+plugin too
+-----------------------------------------------------------------------------------------------------
+functions/directory_listing_functions.php
+
+--------------------------------------------------------------------------------------------------
+Fix:  Multicheckbox and radio button labels were not displayed in author page and listing page
+----------------------------------------------------------------------------------------------------
+functions/directory_listing_functions.php
+
+-------------------------------------------------------------------------------------
+Fix:  Added a script to show hide the content limit option for home page display post widget with grid view.
+-------------------------------------------------------------------------------------------
+functions/widget_functions.php
+
+-------------------------------------------------------------------------------------
+Fix: No image available image was not displaying when no image available.
+-------------------------------------------------------------------------------------
+templates/directory-listing-single-content.php
+templates/listing-search.php
+-------------------------------------------------------------------------------------
+
+
+4th June 2014 (Version 1.0.12)
+-------------------------------------------------------------------------------------
+Fix - Translation with po-edit,Add some hooks
+---------------------------------------------------------------------------------------
+templates/directory-listing-single-content.php
+functions/directory_functions.php
+functions/widget_functions.php
+---------------------------------------------------------------------------------------
+Change: messages
+---------------------------------------------------------------------------------------
+functions/google_map_details.php
+---------------------------------------------------------------------------------------
+Change: For unique code and display same boxes on all pages change the html structure.
+---------------------------------------------------------------------------------------
+templates/directory-listing-single-content.php
+templates/taxonomy-listingcategory.php
+templates/taxonomy-listingtags.php
+templates/archive-listing.php
+templates/listing-search.php
+functions/directory_listing_functions.php
+---------------------------------------------------------------------------------------
+Change: Move widgets in google-maps folder
+---------------------------------------------------------------------------------------
+functions/widget_functions.php
+google-maps/widgets.php
+
+23rd April 2014 (Version 1.0.11)
+-------------------------------------------------------------------------------------
+Improvement: Added new actions which increase customization possibilities
+--------------------------------------------------------------------------------
+templates/directory-listing-single-content.php
+templates/single-listing-preview.php
+templates/taxonomy-listingcategory.php
+templates/single-listing.php
+--------------------------------------------------------------------------------
+
+Fix: Thumbnails were not appearing properly in home page grid view widget in IE8
+----------------------------------------------------------------------------------
+css/directory.css
+---------------------------------------------------------------------------------
+
+Fix: Marker wasn't appearing on map if there are double quotes in listing title
+---------------------------------------------------------------------------------
+functions/google_map_detail.php
+google-maps/google_map_detail.php
+------------------------------------------------------------------------------------
+
+Fix: Displayed default map icon if user have not uploaded an icon for any category
+------------------------------------------------------------------------------------
+functions/directory_listing_functions.php
+functions/google_map_detail.php
+functions/manage_category_customfields.php
+--------------------------------------------------------------------
+
+Fix: Except option was not working on event archive page
+--------------------------------------------------------------------
+functions/directory_filters.php
+-------------------------------------------------------------------------
+
+Fix: category slug issue with WPML plugin in home page display post widget
+-------------------------------------------------------------------------
+functions/widget_functions.php
+---------------------------------------------
+
+1st April 2014 (Version 1.0.10)
+----------------------------------------------------------------------------------------------------
+Feature: Detail page and category page of new custom post type will now look like Listing pages
+-----------------------------------------------------------------------------------------------------
+functions/directory_functions.php
+functions/directory_page_templates.php
+functions/directory_single_functions.php
+templates/directory-listing-single-content.php
+functions/directory_filters.php
+functions/directory_listing_functions.php
+-------------------------------------------------------------------------
+
+Change: Remove hide empty option from All Categories widget when location manager is activated, 
+it will work only without location manager
+-------------------------------------------------------------------------
+functions/widget_functions.php
+-------------------------------------------------------------------------
+Improvement: Minified CSS
+------------------------------------------------
+css/directory.css/directory
+------------------------------------------------
+
+Fix: Translation was not working properly with global .po file
+-------------------------------------------------------------------------
+directory.php
+-------------------------------------------------------------
+
+Fix: Added placeholder script for ie in search widget
+-------------------------------------------------------------
+functions/widget_functions.php
+---------------------------------------------------------------------------------------------------------
+
+Fix: If parent category is not assigned to any listing then listings assigned to its child category were
+not appearing on map
+---------------------------------------------------------------------------------------------------------
+/google-maps/google_maps.php
+
+
+
+6th March 2014 (Version 1.0.9)
+----------------------------------------------------------------
+Fix: Images were not showing up properly on preview page
+-------------------------------------------------------------
+templates/single-listing-preview.php
+-------------------------------------------------------------
+
+Fix: Google map markers were not coming properly in IE8
+-------------------------------------------------------
+functions/directory_listing_functions.php
+google-maps/google_map.js
+google-maps/google_maps.php
+----------------------------------------------------------------------------
+
+Fix: Special characters in category name causes map markers to stop working
+----------------------------------------------------------------------------
+google-maps/google_maps.php
+functions/directory_listing_functions.php
+------------------------------------------------------------------------------
+
+Fix: Single city home page map marker problem for child parent category marker
+-------------------------------------------------------------------------------
+google-maps/google_maps.php
+-----------------------------------------------------------------------------------------------------------------
+
+New option: Added option to disable marker clustering in single city map widgets for home page and category page
+----------------------------------------------------------------------------------------------------------------
+google-maps/google_map.js
+google-maps/google_maps.php
+----------------------------------------------------------------------------------
+
+Fix: display category wise map icon on all listings and all events archive pages
+---------------------------------------------------------------------------------
+google-maps/google_maps.php
+functions/directory_listing_functions.php
+------------------------------------------------------------------------------
+
+
+Fix: Google map marker info window design issue when there is no image in the listing
+--------------------------------------------------------------------------------------
+google-maps/google_maps.php
+functions/directory_listing_functions.php
+functions/directory_functions.php
+--------------------------------------------------------------------------------------
+
+Fix: Corrected the field in csv file
+------------------------------------------------------------
+functions/listing_sample.csv
+--------------------------------------------------------------------
+
+Fix: Corrected plugin name for WPML language filtering conditions
+-------------------------------------------------------------------
+functions/directory_functions.php
+functions/widget_functions.php
+listing/install.php
+functions/directory_single_functions.php
+functions/directory_page_templates.php
+functions/directory_listing_functions.php
+-------------------------------------------------------------------
+
+Fix: Address was not appearing in Neighbourhood listings widget
+--------------------------------------------------------------------
+functions/widget_functions.php
+----------------------------------------------------------------------------------
+
+Tweak: Changed Widget name to "Homepage Display Posts" from "Homepage Featured Posts" 
+-------------------------------------------------------------------------------------
+functions/widget_functions.php
+--------------------------------------------------------------------------------
+
+Fix: Database error was coming when latitude and longitude fields are empty
+--------------------------------------------------------------------------------
+functions/directory_filters.php
+----------------------------------------------------------------------
+
+Fix: Selected categories and tags were not appearing on preview page
+----------------------------------------------------------------------
+functions/directory_single_functions.php
+templates/single-listing-preview.php
+----------------------------------------------------------------------
+
+Fix: Pending comments were also appearing in comments count
+----------------------------------------------------------------------
+functions/directory_listing_functions.php
+-----------------------------------------------------------
+
+5th February 2014 (Version 1.0.8)
+--------------------------------------------------------------------------------------
+Fix: Related events selection box in back end add listing page shows DRAFT events also
+-------------------------------------------------------------------------------------
+functions/directory_functions.php
+templates/directory-listing-single-content.php
+-----------------------------------------------------------------
+Fix- for home page widgets move newly added custom fields on above the listing excerpt
+----------------------------------------------------------------------------------
+functions/directory_listing_functions.php
+---------------------------------------------------------------------------
+Fix - listing page - number of subcategories shown - changed 3 col to 4 col.
+---------------------------------------------------------------------------
+css/directory.css
+------------------------------------------------------------------------------------------------------
+Fix: Fix: Made google map not dragabble in mobile devices as it was now allowing to scroll down the page
+------------------------------------------------------------------------------------------------------
+functions/directory_listing_functions.php
+functions/widget_functions.php
+----------------------------------------------------------------------------
+Fix:  - Made listing preview page same as listing detail page
+----------------------------------------------------------------------------
+templates/single-listing-preview.php
+--------------------------------------------------------------------------------
+Fix: website link was broken on preview page when we don't use http:// in the uRL
+--------------------------------------------------------------------------------
+templates/single-listing-preview.php
+--------------------------------------------------------------
+Fix: In all map widgets info window pop up was getting cut-off
+--------------------------------------------------------------
+functions/directory_listing_functions.php
+js/search_map_script.js
+--------------------------------------------------------------------------------
+Fix: Added an option to select hide empty in the All Categories list widget
+--------------------------------------------------------------------------------
+functions/widget_functions.php
+--------------------------------------------------------------
+
+16th January 2014 (Version 1.0.7)
+----------------------------------------------------------------------------------
+Improvement: Localization Improvements
+----------------------------------------------------------------
+All files in the plugin
+---------------------------------------------------------------------------------
+Improvement: Fetch the custom field label in detail page instead of static label
+---------------------------------------------------------------------------------
+templates/single-listing.php
+templates/taxonomy-listingcategory.php
+templates/directory-listing-single-content.php
+------------------------------------------------------------------
+Fix: Tags showing up twice on detail page of Listings
+------------------------------------------------------------------
+functions/directory_functions.php
+-----------------------------------------------------------------------------------
+Fix: search by address field doesn't work when location manager plugin was deactivated
+--------------------------------------------------------------------------------------
+functions/directory_filters.php
+----------------------------------------------------------
+
+11th January 2013 (Version 1.0.6)
+----------------------------------------------------------------------
+Improvement: Changes in how custom fields are fetched
+---------------------------------------------------------------------
+
+18th December 2013 (Version 1.0.5)
+-------------------------------------------------------------------
+Fix: Database error on home page featured listing widget
+------------------------------------------------------------
+functions/directory_filters.php
+-----------------------------------------------
+
+18th December 2013 (Version 1.0.5)
+-------------------------------------------------------------------
+Fix: Database error on home page featured listing widget
+------------------------------------------------------------
+functions/directory_filters.php
+-----------------------------------------------
+
+13th December 2013 (Version 1.0.4)
+-----------------------------------------------------------------------------------
+Improvement - Listing Detail page Social share icons - structure & design changes
+----------------------------------------------------------------------------------
+css/directory.css
+templates/directory-listing-single-content.php
+images/i_facebook21.png
+images/i_googleplus.png
+images/i_share.png
+images/i_twitter2.png
+--------------------------------------------------------------------------------------
+Fix: Address line coming up in listing titles in 'Homepage Featured Listings' widget
+--------------------------------------------------------------------------------------
+css/directory.css
+----------------------------------------------
+3rd December 2013 (Version 1.0.3)
+----------------------
+UPDATED : po-mo files.
+----------------------
+languages/en_US.mo
+languages/en_US.po
+
+--------------------------------------------------------
+FIX : Search near by widget issue without search keyword.
+--------------------------------------------------------
+functions/widget_functions.php
+
+---------------------------------------------
+FIX : Swapped share and social media buttons.
+---------------------------------------------
+css/directory.css
+templates/directory-listing-single-content.php
+
+-------------------------------------------------------------------
+FIX : Display category marker icon in detail page google map direction.
+-------------------------------------------------------------------
+functions/google_map_detail.php
+
+--------------------------------------------------------------------
+FIX : Issue of showing custom fields phone and website on listing page.
+--------------------------------------------------------------------
+functions/directory_listing_functions.php
+
+-----------------------------------------
+FIX : Get Direction select box margin issue.
+-----------------------------------------
+css/directory.css
+
+----------------------------------------------------------------------------
+FIX : Added a code to fetch custom fields particular post type to show or hide.
+----------------------------------------------------------------------------
+functions/widget_functions.php
+
+-----------------------------------------------
+FIX : Search miles wise was not working properly.
+-----------------------------------------------
+functions/directory_filters.php
+
+------------------------------------------
+FIX : Widget title not translated with po mo.
+------------------------------------------
+functions/directory_functions.php
+
+-------------------------
+FIX : w3c validation issue.
+-------------------------
+functions/widget_functions.php
+templates/directory-listing-single-content.php
+
+------------------------------------
+FIX : Assigned all city id to all listings.
+------------------------------------
+listing-dummy-data.xml
+
+-------------------------
+FIX : Issue with rating css
+-------------------------
+css/directory.css
+
+--------------------------------------------------------------------------------------------------------------------
+FIX : Added condition for "T>All Category List Home Page" widget to hide View all link when child categories are not there.
+--------------------------------------------------------------------------------------------------------------------
+functions/widget_functions.php
+
+
+
+20th November 2013 (Version 1.0.2)
+---------------------------------------------------------------------------
+Improvement - Localization of whole plugin
+-----------------------------------------------------
+Fix: External scripts were not working on SSL enabled website
+---------------------------------------------------------------
+/templates/single-listing-preview.php
+/templates/taxonomy-listingcategory.php
+/functions/directory_filters.php
+/functions/directory_single_functions.php
+/functions/google_map_detail.php
+-----------------------------------------------------------------------------
+Fix - Image gallery was not coming on detail page when featured image is set
+----------------------------------------------------------------------------
+/templates/directory-listing-single-content.php
+-------------------------------------------------------
+
+15th November 2013 (Version 1.0.1)
+---------------------------------------------------------------------------
+Improvement: Used WP_CONTENT_DIR instead of ABSPATH/wp-content folder path
+--------------------------------------------------------------------------
+directory.php
+/templates/single-listing-preview.php
+------------------------------------------------
+Fix: Made Nearby search widget city specific
+--------------------------------------------
+/functions/directory_filters.php
+------------------------------------------------------------------------
+FIX: Custom fields were getting generated automatically once deleted
+-----------------------------------------------------------------------
+/listing/install.php
+--------------------------------------------------------------------
+Improvement: Other performance related improvements in whole plugin
+--------------------------------------------------------------------

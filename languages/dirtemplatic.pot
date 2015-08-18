@@ -1,0 +1,450 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Tevolution-Directory\n"
+"POT-Creation-Date: 2014-08-20 11:04+0530\n"
+"PO-Revision-Date: 2014-08-20 11:05+0530\n"
+"Last-Translator: \n"
+"Language-Team: Templatic <upendra@templatic.com>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.7\n"
+"X-Poedit-Basepath: D:\\wamp\\www\\translationtesting\\wp-content\\plugins"
+"\\Tevolution-Directory\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: _e\n"
+"X-Poedit-SearchPath-0: D:\\wamp\\www\\translationtesting\\wp-content\\plugins"
+"\\Tevolution-Directory\n"
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_functions.php:182
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/templates/directory-listing-search-form.php:3
+msgid "Search for"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_functions.php:185
+msgid "Enter a location"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_functions.php:196
+msgid "Submit"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_functions.php:326
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/templates/archive-listing.php:133
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/templates/taxonomy-listingcategory.php:137
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/templates/taxonomy-listingtags.php:137
+msgid "Apologies, but no results were found for the requested archive."
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_functions.php:598
+msgid "(Sample csv file)"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:98
+msgid "GRID VIEW"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:99
+msgid "LIST VIEW"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:100
+msgid "MAP"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:115
+msgid "Sort"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:117
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:181
+msgid "Alphabetical"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:120
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:192
+msgid "Publish Date Ascending"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:124
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:196
+msgid "Publish Date Descending"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:127
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:217
+msgid "Random"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:130
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:214
+msgid "Rating"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:133
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:210
+msgid "Reviews"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:137
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:184
+msgid "Title Ascending"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:140
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:188
+msgid "Title Descending"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:144
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:201
+msgid "Start Date low to high"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:148
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:205
+msgid "Start Date high to low"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:226
+msgid "All"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:227
+msgid "A"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:228
+msgid "B"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:229
+msgid "C"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:230
+msgid "D"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:231
+msgid "E"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:232
+msgid "F"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:233
+msgid "G"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:234
+msgid "H"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:235
+msgid "I"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:236
+msgid "J"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:237
+msgid "K"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:238
+msgid "L"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:239
+msgid "M"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:240
+msgid "N"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:241
+msgid "O"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:242
+msgid "P"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:243
+msgid "Q"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:244
+msgid "R"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:245
+msgid "S"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:246
+msgid "T"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:247
+msgid "U"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:248
+msgid "V"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:249
+msgid "W"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:250
+msgid "X"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:251
+msgid "Y"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:252
+msgid "Z"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:284
+msgid "Featured"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:355
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:481
+msgid "twitter"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:361
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:487
+msgid "facebook"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:367
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:493
+msgid "Google+"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_listing_functions.php:887
+msgid "Pinpoint"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_single_functions.php:43
+msgid "Facebook Share."
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/directory_single_functions.php:52
+msgid "Tweet"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/google_map_detail.php:27
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_map_detail.php:29
+msgid "By car"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/google_map_detail.php:28
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_map_detail.php:30
+msgid "By public transit"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/google_map_detail.php:29
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_map_detail.php:31
+msgid "By Bicycling"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/google_map_detail.php:30
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_map_detail.php:32
+msgid "By Walking"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/google_map_detail.php:33
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_map_detail.php:35
+msgid "Metric"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/google_map_detail.php:34
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_map_detail.php:36
+msgid "Imperial"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/google_map_detail.php:38
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/google_map_detail.php:57
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_map_detail.php:39
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_map_detail.php:58
+msgid "Enter Location"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/google_map_detail.php:40
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_map_detail.php:41
+msgid "Get Directions"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/google_map_detail.php:41
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_map_detail.php:42
+msgid "View Large Map"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/google_map_detail.php:59
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_map_detail.php:60
+msgid "Please enter your address to get the direction map."
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/functions/google_map_detail.php:331
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_map_detail.php:214
+msgid "View Larger Map"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:39
+msgid "Disable"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:48
+msgid "Click"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:310
+msgid ""
+"<h3>No Records Found</h3><p>Sorry, no records were found. Please adjust your "
+"search criteria and try again.</p>"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:314
+msgid "Title or Keyword"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:407
+msgid "Select Post:"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:421
+msgid "Categories:"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/google_maps.php:1103
+msgid "Categories"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:106
+msgid "Sorry! There is no near by results found"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:204
+msgid "Sorry! No near by results found."
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:351
+msgid "Where?"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:354
+msgid "Within?"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:365
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/templates/directory-listing-search-form.php:6
+msgid "Search"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:374
+msgid "Address"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:540
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:578
+msgid "View all &raquo;"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:699
+msgid "Mile range:"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/google-maps/widgets.php:701
+msgid "Kilometer range:"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/templates/directory-listing-single-content.php:64
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/templates/single-listing-preview.php:253
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/templates/tevolution-single-listing-preview.php:83
+msgid "Overview"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/templates/directory-listing-single-content.php:69
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/templates/single-listing-preview.php:256
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/templates/tevolution-single-listing-preview.php:86
+msgid "Map"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/templates/directory-listing-single-content.php:91
+msgid "Events"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/templates/directory-listing-single-content.php:211
+msgid "Upload Images"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/templates/directory-listing-single-content.php:265
+msgid "Edit Video"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/templates/listing-search.php:45
+msgid "Search Results for: "
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/templates/listing-search.php:146
+msgid ""
+"Sorry! No results were found for the requested search. Try searching with "
+"some different keywords"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/templates/single-listing-preview.php:199
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/templates/tevolution-single-listing-preview.php:32
+msgid "Logo"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/templates/single-listing-preview.php:213
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/templates/tevolution-single-listing-preview.php:45
+msgid "Website"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/templates/single-listing-preview.php:218
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/templates/tevolution-single-listing-preview.php:50
+msgid "Phone"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/templates/single-listing-preview.php:221
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/templates/tevolution-single-listing-preview.php:53
+msgid "Time"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/templates/single-listing-preview.php:224
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/templates/tevolution-single-listing-preview.php:56
+msgid "Email"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/templates/single-listing-preview.php:260
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/templates/tevolution-single-listing-preview.php:90
+msgid "Special Offer"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/templates/single-listing-preview.php:264
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/templates/tevolution-single-listing-preview.php:94
+msgid "Video"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/templates/single-listing-preview.php:466
+msgid "Back to Top"
+msgstr ""
+
+#: D:\wamp\www\translationtesting\wp-content\plugins\Tevolution-Directory/templates/single-listing.php:47
+msgid "Upload "
+msgstr ""

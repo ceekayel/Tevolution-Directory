@@ -1,0 +1,83 @@
+<wpml-config>
+    <custom-fields>
+        <custom-field action="copy">contact_info</custom-field>
+        <custom-field action="copy">submit-listing</custom-field>
+        <custom-field action="copy">zooming_factor</custom-field>
+        <custom-field action="copy">viewed_count_daily</custom-field>
+        <custom-field action="copy">viewed_count</custom-field>
+        <custom-field action="copy">validity_per</custom-field>
+        <custom-field action="copy">validity</custom-field>
+        <custom-field action="copy">alive_days</custom-field>
+        <custom-field action="copy">billing_cycle</custom-field>
+        <custom-field action="copy">billing_num</custom-field>
+        <custom-field action="copy">billing_per</custom-field>
+        <custom-field action="copy">daily_date</custom-field>
+        <custom-field action="copy">feature_amount</custom-field>
+        <custom-field action="copy">featured_type</custom-field>
+        <custom-field action="copy">field_reduire_desc</custom-field>
+        <custom-field action="copy">field_reduire_desc</custom-field>
+        <custom-field action="copy">featured_c</custom-field>
+        <custom-field action="copy">featured_h</custom-field>
+        <custom-field action="copy">heading_type</custom-field>
+        <custom-field action="copy">htmlvar_name</custom-field>
+        <custom-field action="copy">ip_status</custom-field>
+        <custom-field action="copy">limit_no_post</custom-field>
+        <custom-field action="copy">template_post_type</custom-field>
+        <custom-field action="copy">validation_type</custom-field>
+        <custom-field action="copy">is_active</custom-field>
+        <custom-field action="copy">is_delete</custom-field>
+        <custom-field action="copy">is_edit</custom-field>
+        <custom-field action="copy">is_featured</custom-field>
+        <custom-field action="copy">is_require</custom-field>
+        <custom-field action="copy">is_search</custom-field>
+        <custom-field action="copy">on_author_page</custom-field>
+        <custom-field action="copy">on_profile</custom-field>
+        <custom-field action="copy">on_registration</custom-field>
+        <custom-field action="copy">option_title</custom-field>
+        <custom-field action="copy">option_values</custom-field>
+        <custom-field action="copy">package_amount</custom-field>
+        <custom-field action="copy">package_post_type</custom-field>
+        <custom-field action="copy">package_status</custom-field>
+        <custom-field action="copy">package_type</custom-field>
+        <custom-field action="copy">paid_amount</custom-field>
+        <custom-field action="copy">recurring</custom-field>
+        <custom-field action="copy">remote_ip</custom-field>
+        <custom-field action="copy">show_in_column</custom-field>
+        <custom-field action="copy">show_in_email</custom-field>
+        <custom-field action="copy">show_on_detail</custom-field>
+        <custom-field action="copy">show_on_listing</custom-field>
+        <custom-field action="copy">show_on_page</custom-field>
+        <custom-field action="copy">show_on_success</custom-field>
+        <custom-field action="copy">show_package</custom-field>
+        <custom-field action="copy">site_title</custom-field>
+        <custom-field action="copy">sort_order</custom-field>
+        <custom-field action="copy">paid_amount</custom-field>
+        <custom-field action="copy">paid_amount</custom-field>
+        <custom-field action="copy">templ_event_ticket</custom-field>
+        <custom-field action="copy">templ_event_ticket_booked</custom-field>
+        <custom-field action="copy">templ_event_ticket_ids</custom-field>
+        <custom-field action="translate">wpml_media_processed</custom-field>
+        <custom-field action="copy">zones_id</custom-field>
+
+    </custom-fields>
+    <custom-types>
+        <custom-type translate="1">listing</custom-type>
+        <custom-type translate="0">custom_fields</custom-type>
+    </custom-types>    
+    <taxonomies>
+        <taxonomy translate="1">listingcategory</taxonomy>
+        <taxonomy translate="1">listingtags</taxonomy>
+    </taxonomies>    
+	
+	 <admin-texts>
+        <key name="supreme_theme_settings">
+            <key name="supreme_logo_url" />
+            <key name="supreme_site_description" />
+            <key name="supreme_display_image" />
+           
+        </key>
+       
+    </admin-texts>    
+</wpml-config>
+
+

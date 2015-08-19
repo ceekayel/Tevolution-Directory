@@ -9,7 +9,7 @@ function get_the_directory_taxonomies()
 	$taxonomy_category = get_the_taxonomies();
 	$post_type = get_post_type();
 	$taxonomies = get_object_taxonomies( (object) array( 'post_type' => $post_type,'public'   => true, '_builtin' => true ));	
-	$taxonomy_category = str_replace(CUSTOM_MENU_CAT_LABEL_LISTING.':',"<span>".__('Posted in',DIR_DOMAIN)."</span> ",$taxonomy_category[CUSTOM_CATEGORY_TYPE_LISTING]);		
+	$taxonomy_category = str_replace(CUSTOM_MENU_CAT_LABEL_LISTING.':',"<span>".__('Posted in','templatic')."</span> ",$taxonomy_category[CUSTOM_CATEGORY_TYPE_LISTING]);		
 	$taxonomy_category = substr($taxonomy_category,0,-1);	
 	return $taxonomy_category;
 }
@@ -18,7 +18,7 @@ function get_the_directory_tag()
 {
 	global $post;
 	$taxonomy_tag = get_the_taxonomies();		
-	$taxonomy_tag = str_replace(CUSTOM_MENU_TAG_TITLE_LISTING.':',__('Tagged In ',DIR_DOMAIN), @$taxonomy_tag[CUSTOM_TAG_TYPE_LISTING]);		
+	$taxonomy_tag = str_replace(CUSTOM_MENU_TAG_TITLE_LISTING.':',__('Tagged In ','templatic'), @$taxonomy_tag[CUSTOM_TAG_TYPE_LISTING]);		
 	$taxonomy_tag = substr($taxonomy_tag,0,-1);	
 	return $taxonomy_tag;
 }
@@ -150,7 +150,7 @@ function directory_preview_page_fields_collection(){
 			$i=0;
 			if(!empty($value)){
 			foreach($value as $k=>$val){
-				$tmpl_key = ($key=='basic_inf')?  __('Listing Information',DIR_DOMAIN): $heading_type[$key];
+				$tmpl_key = ($key=='basic_inf')?  __('Listing Information','templatic'): $heading_type[$key];
 				if($k!='post_title' && $k!='post_content' && $k!='post_excerpt' && $k!='post_images' && $k!='category' && $k!='listing_timing' && $k!='listing_logo' && $k!='video' && $k!='post_tags' && $k!='map_view' && $k!='proprty_feature' && $k!='phone' && $k!='email' && $k!='website' && $k!='twitter' && $k!='facebook' && $k!='google_plus' && $k!='address' && $k!='post_city_id')
 				{
 					
@@ -246,7 +246,7 @@ function directory_post_preview_categories_tags($cats,$tags)
 	}
 	if($taxonomy_category !='' && !empty($htm_keys) && is_array($htm_keys) && in_array('category',$htm_keys))
 	{		
-		echo "<span>".__('Posted in',DIR_DOMAIN)."</span> ".$taxonomy_category;		
+		echo "<span>".__('Posted in','templatic')."</span> ".$taxonomy_category;		
 	}
 	
 	$tag_terms = explode(',',$tags);
@@ -270,7 +270,7 @@ function directory_post_preview_categories_tags($cats,$tags)
 			$taxonomy_tag .= '<a href="#">' .$termname. '</a>'.$sep;
 		}
 		if(!empty($tag_terms)){			
-			echo sprintf(__('Tagged In %s',DIR_DOMAIN),$taxonomy_tag);			
+			echo sprintf(__('Tagged In %s','templatic'),$taxonomy_tag);			
 		}
 	}
 }
@@ -304,9 +304,9 @@ function tmpl_events_on_place_list_details($events_list,$post){
 				$e_id = $event_detail->ID;
 				$e_title = $event_detail->post_title;
 				if(get_post_meta($e_id,'st_date',true) !='' && get_post_meta($e_id,'end_date',true) !='' ){
-					$date = "<strong>".__('From',DIR_DOMAIN)."</strong>".' '.get_post_meta($e_id,'st_date',true)." ".get_post_meta($e_id,'st_time',true)." <strong>".__('To',DIR_DOMAIN)."</strong> ".get_post_meta($e_id,'end_date',true)." ".get_post_meta($e_id,'end_time',true);
+					$date = "<strong>".__('From','templatic')."</strong>".' '.get_post_meta($e_id,'st_date',true)." ".get_post_meta($e_id,'st_time',true)." <strong>".__('To','templatic')."</strong> ".get_post_meta($e_id,'end_date',true)." ".get_post_meta($e_id,'end_time',true);
 				}elseif(get_post_meta($e_id,'st_date',true) !='' && get_post_meta($e_id,'end_date',true) =='' ){
-					$date = "<strong>".__('From',DIR_DOMAIN)."</strong>".' '.get_post_meta($e_id,'st_date',true)." ".get_post_meta($e_id,'st_time',true);
+					$date = "<strong>".__('From','templatic')."</strong>".' '.get_post_meta($e_id,'st_date',true)." ".get_post_meta($e_id,'st_time',true);
 				} ?>
 				<a class="event_img" href="<?php echo get_permalink($e_id); ?>"><img src="<?php echo $post_image; ?>" width="60" height="60" alt="<?php echo $e_title; ?>"/></a>
 				<div class="event_detail">
@@ -318,7 +318,7 @@ function tmpl_events_on_place_list_details($events_list,$post){
 					$st_date= date_i18n($date_formate,strtotime(get_post_meta($e_id,'st_date',true)));
 					$end_date= date_i18n($date_formate,strtotime(get_post_meta($e_id,'end_date',true)));
 
-					$date=$st_date.' '. __('To',DIR_DOMAIN).' '.$end_date;
+					$date=$st_date.' '. __('To','templatic').' '.$end_date;
 
 					$st_time=date($time_formate,strtotime(get_post_meta($e_id,'st_time',true)));
 					$end_time=date($time_formate,strtotime(get_post_meta($e_id,'end_time',true)));
@@ -326,10 +326,10 @@ function tmpl_events_on_place_list_details($events_list,$post){
 						echo '<p class="address" >'.$address.'</p>';
 					}
 					if($date){
-						echo '<p class="event_date"><strong>'.__('Date:',DIR_DOMAIN).'&nbsp;</strong><span>'.$date.'</span></p>';
+						echo '<p class="event_date"><strong>'.__('Date:','templatic').'&nbsp;</strong><span>'.$date.'</span></p>';
 					}
 					if($st_time || $end_time){
-						echo '<p class="time"><strong>'.__('Timing:',DIR_DOMAIN).'&nbsp;</strong><span>'.$st_time.' '.__('To',DIR_DOMAIN).' '.$end_time.'</span></p>';
+						echo '<p class="time"><strong>'.__('Timing:','templatic').'&nbsp;</strong><span>'.$st_time.' '.__('To','templatic').' '.$end_time.'</span></p>';
 					}?>
 				</div>
 			</div>
@@ -368,9 +368,9 @@ function tmpl_events_on_place_list_details_mobile($events_list,$post){
 					$e_id = $event_detail->ID;
 					$e_title = $event_detail->post_title;
 					if(get_post_meta($e_id,'st_date',true) !='' && get_post_meta($e_id,'end_date',true) !='' ){
-						$date = "<strong>".__('From',DIR_DOMAIN)."</strong>".' '.get_post_meta($e_id,'st_date',true)." ".get_post_meta($e_id,'st_time',true)." <strong>".__('To',DIR_DOMAIN)."</strong> ".get_post_meta($e_id,'end_date',true)." ".get_post_meta($e_id,'end_time',true);
+						$date = "<strong>".__('From','templatic')."</strong>".' '.get_post_meta($e_id,'st_date',true)." ".get_post_meta($e_id,'st_time',true)." <strong>".__('To','templatic')."</strong> ".get_post_meta($e_id,'end_date',true)." ".get_post_meta($e_id,'end_time',true);
 					}elseif(get_post_meta($e_id,'st_date',true) !='' && get_post_meta($e_id,'end_date',true) =='' ){
-						$date = "<strong>".__('From',DIR_DOMAIN)."</strong>".' '.get_post_meta($e_id,'st_date',true)." ".get_post_meta($e_id,'st_time',true);
+						$date = "<strong>".__('From','templatic')."</strong>".' '.get_post_meta($e_id,'st_date',true)." ".get_post_meta($e_id,'st_time',true);
 					} 
 					$address=get_post_meta($e_id,'address',true);		
 				?>
@@ -445,7 +445,7 @@ if(!function_exists('tmpl_get_dir_related_listings')){
 
 			if(!empty($related_posts->posts)){
 			echo "<div class='realated_post clearfix'>";
-			echo "<h3>"; _e('Related Listings',DIR_DOMAIN); echo "</h3>";
+			echo "<h3>"; _e('Related Listings','templatic'); echo "</h3>";
 			echo "<div id='loop_listing_taxonomy' class='grid'>";
 			while($related_posts->have_posts()){  global $post;
 				$related_posts->the_post();

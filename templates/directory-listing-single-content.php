@@ -58,13 +58,13 @@ do_action('dir_before_tabs');
 
      if ($post->post_content != '' || count($post_img) > 0 || count($custom_fields_as_tabs) > 0 || (isset($_REQUEST['action']) && $_GET['action'] == 'edit')):
                ?>	
-               <li class="tab-title active" role="presentational"><a href="#listing_description" role="tab" tabindex="0" aria-selected="false" controls="listing_description"><?php _e('Overview', DIR_DOMAIN); ?></a></li>
+               <li class="tab-title active" role="presentational"><a href="#listing_description" role="tab" tabindex="0" aria-selected="false" controls="listing_description"><?php _e('Overview', 'templatic'); ?></a></li>
                <?php
      endif;
 
      if (@$tmpdata['direction_map'] == 'yes' && $listing_address):
                ?>
-               <li class="tab-title" role="presentational"><a href="#listing_map" role="tab" tabindex="1" aria-selected="false" controls="listing_map"><?php _e('Map', DIR_DOMAIN); ?></a></li>
+               <li class="tab-title" role="presentational"><a href="#listing_map" role="tab" tabindex="1" aria-selected="false" controls="listing_map"><?php _e('Map', 'templatic'); ?></a></li>
                <?php
      endif;
 
@@ -93,7 +93,7 @@ do_action('dir_before_tabs');
                          $events_list = tmpl_get_events_list($event_for_list);
 
                          if (!empty($events_list)) {
-                                   ?><li class="tab-title" role="presentational"><a href="#listing_event" role="tab" tabindex="4" aria-selected="false" controls="listing_event"><?php _e('Events', DIR_DOMAIN); ?></a></li><?php
+                                   ?><li class="tab-title" role="presentational"><a href="#listing_event" role="tab" tabindex="4" aria-selected="false" controls="listing_event"><?php _e('Events', 'templatic'); ?></a></li><?php
                               }
                     }
           }
@@ -214,7 +214,7 @@ do_action('dir_before_tabs');
                                    ?>
                               </ul>
                               <div id="uploadimage" class="upload button secondary_btn clearfix">
-                                   <span><?php _e("Upload Images", DIR_DOMAIN); ?></span>					
+                                   <span><?php _e("Upload Images", 'templatic'); ?></span>					
                               </div>
                          </div>
 
@@ -275,7 +275,7 @@ do_action('dir_before_tabs');
                     if ($is_edit == 1):
                               do_action('oembed_video_description');
                               ?>
-                              <span id="frontend_edit_video" class="frontend_oembed_video button" ><?php _e('Edit Video', DIR_DOMAIN); ?></span>
+                              <span id="frontend_edit_video" class="frontend_oembed_video button" ><?php _e('Edit Video', 'templatic'); ?></span>
                               <input type="hidden" class="frontend_video" name="frontend_edit_video" value='<?php echo $video; ?>' />
                     <?php endif; ?>
                     <div class="frontend_edit_video"><?php
@@ -328,11 +328,11 @@ if (isset($tmpdata['templatic_view_counter']) && $tmpdata['templatic_view_counte
           $custom_content = '';
           echo "<div class='view_counter'>";
           echo "<p>";
-          _e('Visited', DIR_DOMAIN);
+          _e('Visited', 'templatic');
           echo " " . $post_visit_count . " ";
-          ($post_visit_count == 1) ? _e('time', DIR_DOMAIN) : _e('times', DIR_DOMAIN);
+          ($post_visit_count == 1) ? _e('time', 'templatic') : _e('times', 'templatic');
           echo ', ' . $post_visit_daily_count . " ";
-          ($post_visit_daily_count == 1) ? _e("Visit today", DIR_DOMAIN) : _e("Visits today", DIR_DOMAIN);
+          ($post_visit_daily_count == 1) ? _e("Visit today", 'templatic') : _e("Visits today", 'templatic');
           echo "</p>";
           echo '</div>';
 }

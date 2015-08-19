@@ -24,8 +24,8 @@ if(isset($_POST['reset_custom_fields']) && (isset($_POST['custom_reset']) && $_P
 function tevolution_listing_taxonomy_msg(){
 	echo '<div id="message" class="error below-h2">';
 	echo '<form action="" method="post">';	
-	echo "<p class='tevolution_desc'>".__('You have no listing post type now but your directory is in active status so you can generate listing post type again. ',DIR_DOMAIN);
-	echo '<input type="submit" name="listing_post_type" value="'.__('Generate Listing Taxonomy',DIR_DOMAIN).'" class="button-primary">';
+	echo "<p class='tevolution_desc'>".__('You have no listing post type now but your directory is in active status so you can generate listing post type again. ','templatic');
+	echo '<input type="submit" name="listing_post_type" value="'.__('Generate Listing Taxonomy','templatic').'" class="button-primary">';
 	echo '</p>';
 	echo '<form>';
 	echo '</div>';
@@ -352,8 +352,15 @@ if((isset($_REQUEST['page']) && $_REQUEST['page']=='custom_setup' && (isset($_PO
 		$heading_post_type_arr = substr($heading_post_type_arr,0,-1);
 
 	
+	/* removed 	post type "post" from array */
+	$post_type_arr1 = explode(',',$post_type_arr);
+	if (($key = array_search('post', $post_type_arr1)) !== false) {
+		unset($post_type_arr1[$key]);
+	}
+	$post_type_arr1 = implode(',',$post_type_arr1);
+	
 	/* Insert Locations Info heading into posts */
- 	 $locations_info = $wpdb->get_row("SELECT post_title,ID FROM $wpdb->posts WHERE $wpdb->posts.post_name = 'locations_info' and $wpdb->posts.post_type = 'custom_fields'"); 	 
+ 	 $locations_info = $wpdb->get_row("SELECT post_title,ID FROM $wpdb->posts WHERE $wpdb->posts.post_name = 'locations_info' and $wpdb->posts.post_type = 'custom_fields'");
 	
 	 if(count($locations_info) == 0)
 	 {
@@ -366,7 +373,7 @@ if((isset($_REQUEST['page']) && $_REQUEST['page']=='custom_setup' && (isset($_PO
 			 'post_type' => "custom_fields",
 			);
 		$post_meta = array(
-			'post_type'=> $post_type_arr,
+			'post_type'=> $post_type_arr1,
 			'post_type_listing'=> $custom_post_type_listing,
 			'ctype'=>'heading_type',
 			'htmlvar_name'=>'locations_info',
@@ -437,7 +444,7 @@ if((isset($_REQUEST['page']) && $_REQUEST['page']=='custom_setup' && (isset($_PO
 			'heading_type' => 'Locations & Map',			
 			'listing_heading_type' => 'Locations & Map',			
 			'ctype'=>'multicity',
-			'post_type'=> $post_type_arr,
+			'post_type'=> $post_type_arr1,
 			'post_type_property'=> $custom_post_type_listing,
 			'htmlvar_name'=>'post_city_id',
 			'field_category' =>'all',
@@ -536,7 +543,7 @@ if((isset($_REQUEST['page']) && $_REQUEST['page']=='custom_setup' && (isset($_PO
 		$post_meta = array(
 			'heading_type' => 'Locations & Map',
 			'listing_heading_type'=>'Locations & Map',
-			'post_type'=> $post_type_arr,
+			'post_type'=> $post_type_arr1,
 			'post_type_listing'=> $custom_post_type_listing,
 			'ctype'=>'geo_map',
 			'htmlvar_name'=>'address',
@@ -558,7 +565,7 @@ if((isset($_REQUEST['page']) && $_REQUEST['page']=='custom_setup' && (isset($_PO
 			'post_sort_order' => 6,
 			'post_type_post'=>'post',
 			'post_heading_type' => 'Locations & Map',
-			'field_require_desc' => __('Please Enter Address',DIR_DOMAIN),
+			'field_require_desc' => __('Please Enter Address','templatic'),
 			'validation_type' => 'require',
 			);
 		$post_id = wp_insert_post( $my_post );
@@ -612,7 +619,7 @@ if((isset($_REQUEST['page']) && $_REQUEST['page']=='custom_setup' && (isset($_PO
 		$post_meta = array(
 			'heading_type' => 'Locations & Map',
 			'listing_heading_type'=>'Locations & Map',
-			'post_type'=> $post_type_arr,
+			'post_type'=> $post_type_arr1,
 			'post_type_listing'=> $custom_post_type_listing,
 			'ctype'=>'radio',
 			'htmlvar_name'=>'map_view',
@@ -989,7 +996,7 @@ if((isset($_REQUEST['page']) && $_REQUEST['page']=='custom_setup' && (isset($_PO
 			'show_on_detail' => '1',
 			'is_delete' => '0',
 			'show_in_email'  =>'1',
-			'field_require_desc' => __('Please enter phone number',DIR_DOMAIN),
+			'field_require_desc' => __('Please enter phone number','templatic'),
 			'validation_type' => 'require'
 			);
 		$post_id = wp_insert_post( $my_post );

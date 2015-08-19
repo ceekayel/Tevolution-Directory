@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
 	<head>
-		<title><?php echo __( 'Tevolution Update', ADMINDOMAIN ); ?></title>
+		<title><?php echo __( 'Tevolution Update', 'templatic-admin' ); ?></title>
 		<?php
 			wp_enqueue_script( 'jquery-ui-tabs' );
 			wp_enqueue_style( 'jquery-tools', plugins_url( '/css/tabs.css', __FILE__ ) );
@@ -35,7 +35,7 @@
 		$response = wp_remote_post('http://templatic.com/members/login_api.php',$arg );	
 	
 		if( is_wp_error( $response ) ) {
-		  	$warnning_message = __("Invalid UserName or password. are you using templatic member username and password?",ADMINDOMAIN);
+		  	$warnning_message = __("Invalid UserName or password. are you using templatic member username and password?",'templatic-admin');
 		} else { 
 		  	$data = json_decode($response['body']);
 		}
@@ -59,12 +59,12 @@
 				$download_link=$data_product['Tevolution - Directory Plugin'];
 			}else
 			{
-				$warnning_message = __("We don't find Tevolution - Directory Plugin active in your templatic account, you will not be able to update without a license",ADMINDOMAIN);
+				$warnning_message = __("We don't find Tevolution - Directory Plugin active in your templatic account, you will not be able to update without a license",'templatic-admin');
 			}
 		}
 	}else{
 		if(isset($_POST['templatic_login']) && ($_POST['templatic_username'] =='' || $_POST['templatic_password']=='')){
-		$warnning_message= __("Invalid UserName or password. Please enter templatic member's username and password.",ADMINDOMAIN); }
+		$warnning_message= __("Invalid UserName or password. Please enter templatic member's username and password.",'templatic-admin'); }
 	}
 	?>
      <body style="padding:40px;">
@@ -116,7 +116,7 @@
 		  		/* Display plugin update strip button */
 				 $file=TEVOLUTION_DIRECTORY_SLUG;
 		 		 $download= wp_nonce_url( self_admin_url('update.php?action=upgrade-plugin&plugin=').$file, 'upgrade-plugin_' . $file);
-				 echo __('Tevolution-Directory Plugin',ADMINDOMAIN).' <a href="'.$download.'"  target="_parent" class="button-secondary">'.__('Update Now',ADMINDOMAIN).'</a>';
+				 echo __('Tevolution-Directory Plugin','templatic-admin').' <a href="'.$download.'"  target="_parent" class="button-secondary">'.__('Update Now','templatic-admin').'</a>';
 			 endif;?>
           </div>
 <?php

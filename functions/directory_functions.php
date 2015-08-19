@@ -228,7 +228,7 @@ function directory_listing_search(){
 		wp_reset_query();
 	else:
 		?>
-        <p class='nodata_msg'><?php _e( 'Apologies, but no results were found for the requested archive.', DIR_DOMAIN ); ?></p>
+        <p class='nodata_msg'><?php _e( 'Apologies, but no results were found for the requested archive.', 'templatic' ); ?></p>
         <?php
 	endif;
 	exit;
@@ -324,7 +324,7 @@ function directory_edit_link() {
 		return '';
 	
 	$args = wp_parse_args( array( 'before' => '', 'after' => ' ' ), @$args );
-	echo $args['before'] . '<span class="edit"><a class="post-edit-link" href="' . esc_url( get_edit_post_link( get_the_ID() ) ) . '" title="' . sprintf( esc_attr__( 'Edit %1$s', DIR_DOMAIN ), $post_type->labels->singular_name ) . '">' . __( 'Edit', DIR_DOMAIN ) . '</a></span>' . $args['after'];
+	echo $args['before'] . '<span class="edit"><a class="post-edit-link" href="' . esc_url( get_edit_post_link( get_the_ID() ) ) . '" title="' . sprintf( esc_attr__( 'Edit %1$s', 'templatic' ), $post_type->labels->singular_name ) . '">' . __( 'Edit', 'templatic' ) . '</a></span>' . $args['after'];
 }
 /*
  * Display the after directory header widget
@@ -353,13 +353,13 @@ function after_directory_header(){
 function directory_favourite_html($user_id,$post)
 {
 	global $current_user,$post;
-	$add_to_favorite = __('Add to favorites',DIR_DOMAIN);
-	$added = __('Added',DIR_DOMAIN);
+	$add_to_favorite = __('Add to favorites','templatic');
+	$added = __('Added','templatic');
 	if(function_exists('icl_register_string')){
-		icl_register_string(DIR_DOMAIN,'directory'.$add_to_favorite,$add_to_favorite);
-		$add_to_favorite = icl_t(DIR_DOMAIN,'directory'.$add_to_favorite,$add_to_favorite);
-		icl_register_string(DIR_DOMAIN,'directory'.$added,$added);
-		$added = icl_t(DIR_DOMAIN,'directory'.$added,$added);
+		icl_register_string('templatic','directory'.$add_to_favorite,$add_to_favorite);
+		$add_to_favorite = icl_t('templatic','directory'.$add_to_favorite,$add_to_favorite);
+		icl_register_string('templatic','directory'.$added,$added);
+		$added = icl_t('templatic','directory'.$added,$added);
 	}
 	$post_id = $post->ID;
 	$user_meta_data = get_user_meta($current_user->ID,'user_favourite_post',true);
@@ -384,18 +384,19 @@ function directory_favourite_html($user_id,$post)
 add_action('directory_the_taxonomies','directory_post_categories_tags');
 function directory_post_categories_tags()
 {
-	global $wp_query, $post,$htmlvar_name;
+	global $wp_query, $post,$htmlvar_name,$tmpl_flds_varname;
+	
 	$taxonomies = get_object_taxonomies( (object) array( 'post_type' => $post->post_type,'public'   => true, '_builtin' => true ));
 	$terms = get_the_terms($post->ID, $taxonomies[0]);
 	$sep = ", ";
 	$i = 0;
-	if(!empty($terms) && (!empty($htmlvar_name['basic_inf']['category']) || !empty($htmlvar_name['category']))){
+	if(!empty($terms) && (!empty($htmlvar_name['basic_inf']['category']) || !empty($tmpl_flds_varname['category']))){
     //if(!empty($terms)){     
 		foreach($terms as $term){		
 			if($i == ( count($terms) - 1)){
 				$sep = '';
 			}elseif($i == ( count($terms) - 2)){
-				$sep = __(' and ',DIR_DOMAIN);
+				$sep = __(' and ','templatic');
 			}
 			$term_link = get_term_link( $term, $taxonomies[0] );
 			if( is_wp_error( $term_link ) )
@@ -405,7 +406,7 @@ function directory_post_categories_tags()
 		}
 	
 		echo '<p class="bottom_line"><span class="i_category">';
-		echo '<span>'.__('Posted in',DIR_DOMAIN).' '.$taxonomy_category.'</span>';
+		echo '<span>'.__('Posted in','templatic').' '.$taxonomy_category.'</span>';
 		echo '</span></p>';
 	}
 	global $post;
@@ -414,12 +415,14 @@ function directory_post_categories_tags()
 	$tag_terms = get_the_terms($post->ID, $taxonomies[1]);
 	$sep = ",";
 	$i = 0;
-	if($tag_terms){
+	if(!empty($tag_terms)  && (!empty($htmlvar_name['basic_inf']['post_tags']) || !empty($tmpl_flds_varname['post_tags'])))
+	{
+
 		foreach($tag_terms as $term){	
 			if($i == ( count($tag_terms) - 1)){
 				$sep = '';
 			}elseif($i == ( count($tag_terms) - 2)){
-				$sep = __(' and ',DIR_DOMAIN);
+				$sep = __(' and ','templatic');
 			}
 			$term_link = get_term_link( $term, $taxonomies[1] );
 			if( is_wp_error( $term_link ) )
@@ -427,11 +430,10 @@ function directory_post_categories_tags()
 			$taxonomy_tag .= '<a href="' . $term_link . '">' . $term->name . '</a>'.$sep; 
 			$i++;
 		}
-	}
-	if(!empty($tag_terms))
-	{
+
+	
 		echo '<p class="bottom_line"><span class="i_category">';
-		echo '<span>'.__('Tagged In ',DIR_DOMAIN).$taxonomy_tag.'</span>';
+		echo '<span>'.__('Tagged In ','templatic').$taxonomy_tag.'</span>';
 		echo '</span></p>';
 	}
 }
@@ -441,7 +443,7 @@ function directory_post_categories_tags()
 add_action('tevolution_listing_sample_csvfile','tevolution_listing_sample_csvfile');
 function tevolution_listing_sample_csvfile(){
 	?>
-	<a href="<?php echo TEVOLUTION_DIRECTORY_URL.'functions/listing_sample.csv';?>"><?php _e('(Sample csv file)',DIR_DOMAIN);?></a>
+	<a href="<?php echo TEVOLUTION_DIRECTORY_URL.'functions/listing_sample.csv';?>"><?php _e('(Sample csv file)','templatic');?></a>
 	<?php	
 }
 /*
@@ -534,7 +536,7 @@ function directory_listing_search_map(){
 			
 			$image_class=($post_image)?'map-image' :'';
 			$comment_count= count(get_comments(array('post_id' => $ID)));
-			$review=($comment_count ==1 )? __('review',DIR_DOMAIN):__('reviews',DIR_DOMAIN);
+			$review=($comment_count ==1 )? __('review','templatic'):__('reviews','templatic');
 
 			if(($lat && $lng )&& !in_array($ID,$pids))
 			{ 	
@@ -622,7 +624,7 @@ function tmpl_custom_fields_post_type_return(){
 		$submit_link='';
 		if($post_query->have_posts()){
 			while ($post_query->have_posts()) { $post_query->the_post();
-				$submit_link='<a href="'.get_permalink().'" target="_blank" class="view_frm_link"><small>'.__(' View Form',ADMINDOMAIN).'</small></a>';
+				$submit_link='<a href="'.get_permalink().'" target="_blank" class="view_frm_link"><small>'.__(' View Form','templatic-admin').'</small></a>';
 			}
 		}
 		if((isset($_REQUEST['post_type_fields']) && $_REQUEST['post_type_fields']=='listing') || $_REQUEST['post_type_fields']==''){ $class="current"; }else{ $class=""; }
@@ -693,5 +695,166 @@ add_action('save_post','tmpl_remove_home_page_featured_');
 function tmpl_remove_home_page_featured_(){
 	global $wpdb;
 	$wpdb->query($wpdb->prepare( "delete from $wpdb->options where option_name LIKE %s",'%tev_hdpw_%'));
+}
+
+
+/* add directory plugin widgets */
+add_action('widgets_init','tmpl_directory_custom_widgets',99); // unregister display home page widget
+function tmpl_directory_custom_widgets(){
+
+	register_widget( 'TmplListingOwner');
+
+}
+
+
+/* Widget to display the agent details on detail page */
+class TmplListingOwner extends WP_Widget {
+	/*
+	 * Register widget with WordPress.
+	 */	
+	function __construct() {
+		$widget_ops = array('classname' => 'tmpl_listing_owner', 'description' => __('Display the agent details on property detail page sidebar.','templatic') );
+		$this->WP_Widget('TmplListingOwner', __('T &rarr; Listing Owner','templatic-admin'), $widget_ops);
+	}
+	
+	function widget( $args, $instance ) {
+	
+		/* prints the widget*/
+		extract($args, EXTR_SKIP);
+		/* Show this widget only on preview page single page and on author page */
+		
+		if(isset($_REQUEST['p']) || (isset( $_REQUEST['page']) && $_REQUEST['page'] == 'preview') || is_author() || is_single()){
+			echo $args['before_widget'];
+			global $post,$curauth,$current_user;
+			
+			if(empty($curauth)){
+				if($post->post_author !=''){
+					$curauth = $post->post_author;
+				}else{
+					$curauth = $current_user->ID;
+				}
+				$curauth = get_userdata($curauth);
+			} 
+			$title = empty($instance['title']) ? 'Listing Owner' : apply_filters('widget_title', $instance['title']);
+			
+			if(@$_REQUEST['page'] == 'preview')
+			 {
+				global $current_user;
+				$userid = $current_user->ID;
+				$user_details = get_userdata( $userid );
+				$property_id = $_SESSION['custom_fields']['cur_post_id'];
+			 }elseif(is_author()){
+				$author = get_userdata(get_query_var('author'));
+				$userid = $author->ID;
+				$user_details = get_userdata( $userid );
+			 }else{
+				if(isset($_REQUEST['p'])){
+					$post = get_post(@$_REQUEST['p']);
+				}
+				
+				$userid =  $post->post_author;
+				$user_details = get_userdata( $userid );
+				$property_id  = $post->ID;
+			 }
+			if(is_ssl()){ $http = "https://"; }else{ $http ="http://"; } 
+			$facebook = (get_user_meta( $userid,'facebook',true))?((strstr('http',get_user_meta( $userid,'facebook',true))) ? get_user_meta( $userid,'facebook',true) : $http.get_user_meta( $userid,'facebook',true)):'';
+			$twitter = (get_user_meta( $userid,'twitter',true))?((strstr('http',get_user_meta( $userid,'twitter',true))) ? get_user_meta( $userid,'twitter',true) : $http.get_user_meta( $userid,'twitter',true)):'';
+			$google = (get_user_meta( $userid,'user_google',true))?((strstr('http',get_user_meta( $userid,'user_google',true))) ? get_user_meta( $userid,'user_google',true) : $http.get_user_meta( $userid,'user_google',true)) : '';
+			$website = (get_user_meta( $userid,'url',true))?((strstr('http',get_user_meta( $userid,'url',true))) ? get_user_meta( $userid,'url',true) : $http.get_user_meta( $userid,'url',true)):'';
+			$phone = get_user_meta( $userid,'user_phone',true);
+			echo $args['before_title'].$title.$args['after_title']; 
+			
+			/* Show the agent details on preview page */
+			
+			/* Fetch the details of user custom fields */
+			$form_fields_usermeta=fetch_user_custom_fields();
+
+			$submited_user_count = tevolution_get_posts_count($userid);
+			
+				?>
+				<div class="tmpl-agent-details">
+					<div class="agent-top_wrapper">
+					  <div class="tmpl-agent-photo">
+						<?php
+						/* get user ID on preview page */
+						if(!empty($_SESSION['custom_fields'])){
+							$curauth = get_user_by( 'email', $_SESSION['custom_fields']['user_email'] );
+							$user_details = get_user_by( 'email', $_SESSION['custom_fields']['user_email'] );
+							$user_id = $curauth->ID;
+						}
+						/* get user ID on preview page end */
+						
+						if($form_fields_usermeta['profile_photo']['on_author_page']){
+							if(get_user_meta($curauth->ID,'profile_photo',true) != ""){
+								echo '<img src="'.get_user_meta($curauth->ID,'profile_photo',true).'" width="90px" alt="'.$curauth->display_name.'" title="'.$curauth->display_name.'" />';
+							}else{
+								echo get_avatar($curauth->ID, apply_filters('tev_agent_photo_size',90) ); 
+							}
+						}
+						?>
+					  </div>
+					  <div class="tmpl-agent-detail-rt">
+						<!-- Listing details -->
+						<p class="title"><a href="<?php echo get_author_posts_url($user_details->ID); ?>"><strong><?php echo $user_details->display_name; ?></strong></a></p>
+						<p><?php _e('Listing Owner','templatic');?></p>
+					  </div>
+					</div>
+					<div class="auther-other-details">
+						<?php /* About User */
+						
+						/* Display Phone Website */
+						if($form_fields_usermeta['user_phone']['on_author_page'] && $phone ){ ?>
+						<p><strong><?php _e('Phone','templatic'); ?>: </strong><?php echo $phone; ?></p>
+						<?php } 
+						
+						/* Display User Description */
+						if($form_fields_usermeta['description']['on_author_page'] && $user_details->description !=''){
+						?>
+							<p class="user_biography"><strong><?php _e('Profile','templatic'); ?>: </strong><?php echo $user_details->description; ?></p>
+						<?php } ?>
+						
+						<p><strong><?php _e('Total Submissions','templatic'); ?>: </strong><a href="<?php echo get_author_posts_url($user_details->ID); ?>"><?php echo $submited_user_count; ?></a></p>
+						<div class="enquiry-list"><a id="send_inquiry_id" title="Send Inquiry" href="javascript:void(0)" data-reveal-id="tmpl_send_inquiry" class="small_btn tmpl_mail_friend"><?php _e('Send inquiry','templatic');?></a></div>
+					</div>
+					<!-- Display user details -->
+					<div class="agent-social-networks">
+						<?php
+						/* facebook link display */
+						if($form_fields_usermeta['facebook']['on_author_page'] && $facebook){ ?>
+							<a href="<?php echo $facebook; ?>"><i class="fa fa-facebook"></i></a>
+						<?php }
+						/* Twitter link display */
+						if($form_fields_usermeta['twitter']['on_author_page'] && $twitter){ ?>
+							<a href="<?php echo $twitter; ?>"><i class="fa fa-twitter"></i></a>
+						<?php }
+						/* Google Plus link display */
+						if($form_fields_usermeta['user_google']['on_author_page'] && $google ){ ?>
+							<a href="<?php echo $google; ?>"><i class="fa fa-google-plus"></i></a>
+						<?php } ?>
+					</div>
+				</div>
+			<?php
+			echo $args['after_widget'];
+		}
+		
+	}
+	
+	function update($new_instance, $old_instance) {
+		$instance = $old_instance;		
+		$instance['title'] = strip_tags($new_instance['title']);
+		return $instance;
+	}
+	
+	public function form( $instance ) {
+		$instance = wp_parse_args((array)$instance, array('title' =>'') );
+		$title = (strip_tags($instance['title'])) ? strip_tags($instance['title']) : __("Author",'templatic');
+		?>
+		<p>
+		  <label for="<?php echo $this->get_field_id('title'); ?>"><?php echo __('Title','templatic'); ?>:
+			<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" />
+		  </label>
+		</p>
+		<?php
+	}
 }
 ?>

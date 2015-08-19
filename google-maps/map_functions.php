@@ -145,7 +145,7 @@ function tmpl_categorypage_mapview_opt(){
 			
 			$image_class=($post_image)?'map-image' :'';
 			$comment_count= count(get_comments(array('post_id' => $ID)));
-			$review=($comment_count <=1 )? __('review',DIR_DOMAIN):__('reviews',DIR_DOMAIN);
+			$review=($comment_count <=1 )? __('review','templatic'):__('reviews','templatic');
 			if($lat && $lng)
 			{ 
 				$retstr ="{";

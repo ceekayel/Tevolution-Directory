@@ -3,17 +3,17 @@
 Plugin Name: Tevolution - Directory
 Plugin URI: http://templatic.com/docs/directory-plugin-guide/
 Description: Tevolution - Directory plugin is specially built to turn your site into a powerful listings directory for any niche. To be used with Tevolution, this plugin is loaded with a bundle of features like listing submissions, power search, unlimited categories, custom fields and subscription or per listing payment packages.
-Version: 2.0.9
+Version: 2.0.10
 Author: Templatic
 Author URI: http://templatic.com/
 */
 ob_start();
-define( 'TEVOLUTION_DIRECTORY_VERSION', '2.0.9' );
+define( 'TEVOLUTION_DIRECTORY_VERSION', '2.0.10' );
 
 /* Plugin version*/
-define( 'DIR_DOMAIN', 'templatic');  /*tevolution* deprecated*/
+define( 'DIR_DOMAIN', 'templatic2');  /*tevolution* deprecated*/
 if(!defined('ADMINDOMAIN'))
-	define( 'ADMINDOMAIN', 'tevolution' ); /*tevolution* deprecated*/
+	define( 'ADMINDOMAIN', 'templatic-admin' ); /*tevolution* deprecated*/
 
 define('TEVOLUTION_DIRECTORY_SLUG','Tevolution-Directory/directory.php');
 /* Plugin Folder URL*/
@@ -56,13 +56,13 @@ if(is_plugin_active('Tevolution/templatic.php'))
 				load_textdomain( 'dirtemplatic',TEVOLUTION_DIRECTORY_DIR.'languages/templatic-admin-'.$locale.'.mo' );
 				load_textdomain( 'templatic-admin',TEVOLUTION_DIRECTORY_DIR.'languages/templatic-admin-'.$locale.'.mo' );
 		   }else{
-				load_textdomain( DIR_DOMAIN,TEVOLUTION_DIRECTORY_DIR.'languages/dirtemplatic-'.$locale.'.mo' );
+				load_textdomain( 'templatic',TEVOLUTION_DIRECTORY_DIR.'languages/dirtemplatic-'.$locale.'.mo' );
 		   }
 	}else{
 		if(is_admin()){
 			load_textdomain( 'templatic-admin', TEVOLUTION_DIRECTORY_DIR.'languages/templatic-admin-'.$locale.'.mo' );
 		}else{
-			load_textdomain( DIR_DOMAIN, TEVOLUTION_DIRECTORY_DIR.'languages/dirtemplatic-'.$locale.'.mo' );
+			load_textdomain( 'templatic', TEVOLUTION_DIRECTORY_DIR.'languages/dirtemplatic-'.$locale.'.mo' );
 		}
 	}
 	/*Include the tevolution plugins main file to use the core functionalities of plugin.*/
@@ -151,6 +151,15 @@ if(!function_exists('directory_plugin_activate')){
 		if('term_icon' != $field_check)	{
 			$wpdb->query("ALTER TABLE $wpdb->terms ADD term_icon varchar(255) NOT NULL DEFAULT ''");
 		}
+		
+		/* add rule for urls */
+		$tevolution_taxonomies_data1 = get_option('tevolution_taxonomies_rules_data');
+		$tevolution_taxonomies_data1['tevolution_single_post_add']['listing'] = 'listing';
+		update_option('tevolution_taxonomies_rules_data',$tevolution_taxonomies_data1);
+		if(function_exists('tevolution_taxonimies_flush_event'))
+			tevolution_taxonimies_flush_event();
+		/* Delete Tevolution query catch on permalink update  changes */
+		$wpdb->query($wpdb->prepare("DELETE FROM $wpdb->options WHERE option_name like '%s'",'%_tevolution_quer_%' ));
 	}
 }
 
@@ -179,5 +188,5 @@ function directory_wpup_changes(){
 	}
 }
 if(!defined('INCLUDE_ERROR'))
-	define('INCLUDE_ERROR',__('System might facing the problem in include ',DIR_DOMAIN));
+	define('INCLUDE_ERROR',__('System might facing the problem in include ','templatic'));
 ?>

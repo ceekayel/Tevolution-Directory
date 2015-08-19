@@ -55,7 +55,7 @@ if(function_exists('tmpl_single_page_default_custom_field')){
     	<header class="entry-header">
 			<?php if($listing_logo!=""):?>
                 <div class="entry-header-logo">
-                    <img src="<?php echo $listing_logo?>" alt="<?php _e('Logo',DIR_DOMAIN);?>" />
+                    <img src="<?php echo $listing_logo?>" alt="<?php _e('Logo','templatic');?>" />
                 </div>
             <?php endif;?>
         	<section class="entry-header-title">
@@ -68,19 +68,19 @@ if(function_exists('tmpl_single_page_default_custom_field')){
                     <?php if($website!=""):
                     	if(!strstr($website,'http'))
                     		$website = 'http://'.$website; ?>
-                    	<p><a href="<?php echo $website;?>"><?php _e('Website',DIR_DOMAIN);?></a></p>
+                    	<p><a href="<?php echo $website;?>"><?php _e('Website','templatic');?></a></p>
                     <?php endif;?>
                     <?php do_action('directory_display_custom_fields_preview_default_left'); ?>
                     </div>
                     <div class="entry-header-custom-right">
 						<?php if($phone!=""):?>
-                        	<p class="phone"><label><?php _e('Phone',DIR_DOMAIN);?>: </label><span class="listing_custom"><?php echo $phone;?></span></p>
+                        	<p class="phone"><label><?php _e('Phone','templatic');?>: </label><span class="listing_custom"><?php echo $phone;?></span></p>
                         <?php endif;?>
                         <?php if($listing_timing!=""):?>
-                        	<p class="time"><label><?php _e('Time',DIR_DOMAIN);?>: </label><span class="listing_custom"><?php echo $listing_timing;?></span></p>
+                        	<p class="time"><label><?php _e('Time','templatic');?>: </label><span class="listing_custom"><?php echo $listing_timing;?></span></p>
                         <?php endif;?>
                         <?php if($email!=""):?>
-                        	<p class="email"><label><?php _e('Email',DIR_DOMAIN);?>: </label><span class="listing_custom"><?php echo antispambot($email);?></span></p>
+                        	<p class="email"><label><?php _e('Email','templatic');?>: </label><span class="listing_custom"><?php echo antispambot($email);?></span></p>
                         <?php endif;?>    
                         <?php do_action('directory_display_custom_fields_preview_default_right'); ?>                              
                         </div>
@@ -108,18 +108,18 @@ if(function_exists('tmpl_single_page_default_custom_field')){
             
             
             	 <ul class="tabs" data-tab role="tablist">
-                      <li class="tab-title active"><a href="#listing_description"><?php _e('Overview',DIR_DOMAIN);?></a></li>
+                      <li class="tab-title active"><a href="#listing_description"><?php _e('Overview','templatic');?></a></li>
                       
                       <?php if($address!=''):?>
-                      <li class="tab-title"><a href="#listing_map"><?php _e('Map',DIR_DOMAIN);?></a></li>
+                      <li class="tab-title"><a href="#listing_map"><?php _e('Map','templatic');?></a></li>
                       <?php endif;?>
                       
                       <?php if($special_offer!=""):?>
-                      <li class="tab-title"><a href="#special_offer"><?php _e('Special Offer',DIR_DOMAIN);?></a></li>
+                      <li class="tab-title"><a href="#special_offer"><?php _e('Special Offer','templatic');?></a></li>
                       <?php endif;?>
                       
                       <?php if($video!=""):?>
-                      <li class="tab-title"><a href="#listing_video"><?php _e('Video',DIR_DOMAIN);?></a></li>
+                      <li class="tab-title"><a href="#listing_video"><?php _e('Video','templatic');?></a></li>
                       <?php endif;?>
     
                       <?php do_action('dir_end_tabs_preview'); ?>

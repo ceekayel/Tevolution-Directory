@@ -111,11 +111,14 @@ function directory_category_page_image(){
 	}else{
 		$post_type_tag = '';
 	}
+
+	$noimage = apply_filters('supreme_noimage-url',TEVOLUTION_DIRECTORY_URL.'images/noimage-220x150.jpg');
+	
 	if ( has_post_thumbnail()):
 		echo '<div class="listing_img">';
 		do_action('inside_listing_image');
 		echo '<a href="'.get_permalink().'" >';
-		if($featured){echo '<span class="featured_tag">'; _e('Featured',DIR_DOMAIN); echo '</span>';}
+		if($featured){echo '<span class="featured_tag">'; _e('Featured','templatic'); echo '</span>';}
 		the_post_thumbnail('directory-listing-image'); 
 		echo '</a></div>';
 	else:
@@ -136,13 +139,13 @@ function directory_category_page_image(){
 			<?php do_action('inside_listing_image');?>
 			<?php if($thumb_img): ?>
 				<a href="<?php the_permalink();?>">
-				<?php if($featured){echo '<span class="featured_tag">'.__('Featured',DIR_DOMAIN)." ".$post_type_tag; echo'</span>';} ?>
+				<?php if($featured){echo '<span class="featured_tag">'.__('Featured','templatic')." ".$post_type_tag; echo'</span>';} ?>
 				<img src="<?php echo $thumb_img; ?>"  alt="<?php echo $img_alt; ?>" title="<?php echo $img_title; ?>" />
 				</a>
 			<?php else:?>
 				<a href="<?php the_permalink();?>">
-				<?php if($featured){echo '<span class="featured_tag">'.__('Featured',DIR_DOMAIN)." ".$post_type_tag; echo'</span>';} ?>
-				<img src="<?php echo TEVOLUTION_DIRECTORY_URL; ?>images/noimage-220x150.jpg" alt="" />
+				<?php if($featured){echo '<span class="featured_tag">'.__('Featured','templatic')." ".$post_type_tag; echo'</span>';} ?>
+					<img src="<?php echo $noimage; ?>" alt="" />
 				</a>
 			<?php
 			endif;
@@ -199,19 +202,19 @@ function directory_listing_after_title($htmlvar_name = ''){
 			if($twitter != '' && $htmlvar_name['twitter'])
 			{
 			?>
-				<a class='twitter <?php echo $htmlvar_name['twitter']['style_class']; ?>' href="<?php echo $twitter;?>"><label><?php _e('twitter',DIR_DOMAIN); ?></label></a>
+				<a class='twitter <?php echo $htmlvar_name['twitter']['style_class']; ?>' href="<?php echo $twitter;?>"><label><?php _e('twitter','templatic'); ?></label></a>
 			<?php
 			}
 			if($facebook != '' && $htmlvar_name['facebook'])
 			{
 			?>
-				<a class='facebook <?php echo $htmlvar_name['facebook']['style_class']; ?>' href="<?php echo $facebook;?>"><label><?php _e('facebook',DIR_DOMAIN); ?></label></a>
+				<a class='facebook <?php echo $htmlvar_name['facebook']['style_class']; ?>' href="<?php echo $facebook;?>"><label><?php _e('facebook','templatic'); ?></label></a>
 			<?php
 			}
 			if($google_plus != '' && $htmlvar_name['google_plus'])
 			{
 			?>
-				<a class='google_plus <?php echo $htmlvar_name['google_plus']['style_class']; ?>' href="<?php echo $google_plus;?>"><label><?php _e('Google+',DIR_DOMAIN); ?></label></a>
+				<a class='google_plus <?php echo $htmlvar_name['google_plus']['style_class']; ?>' href="<?php echo $google_plus;?>"><label><?php _e('Google+','templatic'); ?></label></a>
 			<?php
 			}
 			echo "</div>";
@@ -225,8 +228,7 @@ function directory_listing_after_title($htmlvar_name = ''){
 				}
 	
 				$key = ($key=='basic_inf')?'Listing Information': $key;
-				if($key!='post_title' && $key!='post_content' && $key!='post_excerpt' && $key!='post_images' && $key!='listing_timing' && $key!='address' && $key!='listing_logo' && $key!='post_tags' && $key!='map_view'  && $key!='phone' && $key!='twitter' && $key!='facebook' && $key!='google_plus' && $key!='contact_info')
-				{
+				if($key!='post_title' && $key!='post_content' && $key!='post_excerpt' && $key!='post_images' && $key!='listing_timing' && $key!='address' && $key!='listing_logo' && $key!='post_tags' && $key!='map_view'  && $key!='phone' && $key!='twitter' && $key!='facebook' && $key!='google_plus' && $key!='contact_info'){
 					$field= get_post_meta($post_id,$key,true);
 					if($value['type'] == 'multicheckbox' && $field!=""):
 						$checkbox_value='';
@@ -242,7 +244,7 @@ function directory_listing_after_title($htmlvar_name = ''){
 							}
 						}
 					?>
-					<p class='<?php echo $key;?>'><label><?php echo $value['label']; ?></label>: <?php echo substr($checkbox_value,0,-2);?></p>
+					<p class='<?php echo $key;?>'><label><?php echo $value['label']; ?>:&nbsp;</label><?php echo substr($checkbox_value,0,-2);?></p>
 					<?php
 					elseif($value['type']=='radio'):
 						$option_values = explode(",",$value['option_values']);
@@ -255,7 +257,7 @@ function directory_listing_after_title($htmlvar_name = ''){
 									$rado_value = $option_values[$i];
 								}
 								?>
-								<p class='<?php echo $key;?>'><label><?php echo $value['label']; ?></label>: <?php echo $rado_value;?></p>
+								<p class='<?php echo $key;?>'><label><?php echo $value['label']; ?>:&nbsp;</label><?php echo $rado_value;?></p>
 								<?php
 							}
 						}
@@ -274,7 +276,7 @@ function directory_listing_after_title($htmlvar_name = ''){
 						global $wpdb,$country_table,$zones_table,$multicity_table;
 						$multicity_table = $wpdb->prefix . "multicity";
 						$cityinfo = $wpdb->get_results($wpdb->prepare("select cityname from $multicity_table where city_id =%d",$field )); ?>
-						<p class='<?php echo $value['style_class'];?>'><label><?php echo $value['label']; ?>: </label> <?php echo $cityinfo[0]->cityname; ?></p>
+						<p class='<?php echo $value['style_class'];?>'><label><?php echo $value['label']; ?>:&nbsp;</label><?php echo $cityinfo[0]->cityname; ?></p>
 					<?php 
 					elseif(@$key=='website' &&  $field!= ''):
 						$website = $field;
@@ -283,10 +285,10 @@ function directory_listing_after_title($htmlvar_name = ''){
 							$website = 'http://'.$website;
 						}
 					 ?>
-						<p class='<?php echo $value['style_class'];?>'><label><?php echo $value['label']; ?>: </label> <a target="_blank" href="<?php echo $website;?>"><?php echo $website;?></a></p>
+						<p class='<?php echo $value['style_class'];?>'><label><?php echo $value['label']; ?>:&nbsp;</label><a target="_blank" href="<?php echo $website;?>"><?php echo $website;?></a></p>
 					<?php endif;
 					if($value['type']!='multicity' && @$value['type'] != 'multicheckbox' && @$value['type'] != 'radio' && $value['type'] !='' &&  @$value['type'] != 'oembed_video' && $key!='website' && $field!=''): ?>                              
-					<p class='<?php echo $value['style_class'];?>'><label><?php echo $value['label']; ?>: </label> <?php echo $field;?></p>
+					<p class='<?php echo $value['style_class'];?>'><label><?php echo $value['label']; ?>:&nbsp;</label> <?php echo $field;?></p>
 					<?php
 					endif;
 				
@@ -313,7 +315,7 @@ function directory_after_taxonomies_content(){
 		$post_id=get_the_ID();
 		$templatic_settings=get_option('templatic_settings');
 		$comment_count= count(get_comments(array('post_id' => $post_id,	'status'=> 'approve')));
-		$review=($comment_count <=1 )? __('review',DIR_DOMAIN):__('reviews',DIR_DOMAIN);
+		$review=($comment_count <=1 )? __('review','templatic'):__('reviews','templatic');
 		$review=apply_filters('tev_review_text',$review);
 
 		if(current_theme_supports('tevolution_my_favourites') ):?>
@@ -327,7 +329,7 @@ function directory_after_taxonomies_content(){
 			<?php
 		}
 		if( !empty($address) && isset($templatic_settings['category_googlemap_widget']) &&  @$templatic_settings['category_googlemap_widget']!='yes' && @$templatic_settings['pippoint_oncategory'] ==1 && !is_author() && !$is_related && !is_home()):?> 
-          	<li class='pinpoint'><a id="pinpoint_<?php echo $post_id;?>" class="ping" href="#map_canvas"><?php _e('Pinpoint',DIR_DOMAIN);?></a></li>
+          	<li class='pinpoint'><a id="pinpoint_<?php echo $post_id;?>" class="ping" href="#map_canvas"><?php _e('Pinpoint','templatic');?></a></li>
 		<?php endif;
 
 		echo '</ul>';
@@ -338,6 +340,6 @@ function directory_after_taxonomies_content(){
 function directory_listing_city_name()
 {
 	global $post;
-	echo sprintf(__('We have found these results for listings matching your search criteria.',DIR_DOMAIN),$post->post_type); 
+	echo sprintf(__('We have found these results for listings matching your search criteria.','templatic'),$post->post_type); 
 }
 ?>

@@ -45,7 +45,7 @@ if (function_exists('tmpl_single_page_default_custom_field')) {
                                         <div style="display:none;" class="frontend_listing_logo"><?php echo $listing_logo ?></div>
                                         <!--input id="fronted_files_listing_logo" class="fronted_files" type="file" multiple="true" accept="image/*" /-->
                                         <div id="fronted_upload_listing_logo" class="frontend_uploader button" data-src="<?php echo $listing_logo ?>">	                 	
-                                             <span><?php _e('Upload ', DIR_DOMAIN) . $tmpl_flds_varname['listing_logo']['label']; ?></span>						
+                                             <span><?php _e('Upload ', 'templatic') . $tmpl_flds_varname['listing_logo']['label']; ?></span>						
                                         </div>
                                    </div>
                          <?php endif; do_action('tmpl_after_logo');?>
@@ -63,7 +63,7 @@ if (function_exists('tmpl_single_page_default_custom_field')) {
                               if ($tmpdata['templatin_rating'] == 'yes'):
                                         $total = get_post_total_rating(get_the_ID());
                                         $total = ($total == '') ? 0 : $total;
-                                        $review_text = ($total == 1) ? '<a href="#comments">' . $total . ' ' . __('Review', DIR_DOMAIN) . '</a>' : '<a href="#comments">' . $total . ' ' . __('Reviews', DIR_DOMAIN) . '</a>';
+                                        $review_text = ($total == 1) ? '<a href="#comments">' . $total . ' ' . __('Review', 'templatic') . '</a>' : '<a href="#comments">' . $total . ' ' . __('Reviews', 'templatic') . '</a>';
                                         ?>
                                         <div class="listing_rating">
                                              <div class="directory_rating_row"><span class="single_rating"> <?php echo draw_rating_star_plugin(get_post_average_rating(get_the_ID())); ?> <span><?php echo $review_text ?></span></span></div>

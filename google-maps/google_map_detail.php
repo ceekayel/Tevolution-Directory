@@ -26,20 +26,20 @@ $term_icon=($term_icon!="")?$term_icon: apply_filters('tmpl_default_map_icon',TE
 <form action="" method="post" onsubmit="get_googlemap_directory(); return false;">
 	<input id="to-input" type="hidden" value="<?php echo $address;?>"/>
 	<select onchange="Demo.getDirections();" id="travel-mode-input" style="display:none;">
-	  <option value="driving" selected="selected"><?php _e('By car',DOMAIN);?></option>
-	  <option value="transit"><?php _e('By public transit',DOMAIN);?></option>
-	  <option value="bicycling"><?php _e('By Bicycling',DOMAIN);?></option>
-	  <option value="walking"><?php _e('By Walking',DOMAIN);?></option>
+	  <option value="driving" selected="selected"><?php _e('By car','templatic');?></option>
+	  <option value="transit"><?php _e('By public transit','templatic');?></option>
+	  <option value="bicycling"><?php _e('By Bicycling','templatic');?></option>
+	  <option value="walking"><?php _e('By Walking','templatic');?></option>
 	</select>
 	<select onchange="Demo.getDirections();" id="unit-input" style="display:none;">
-	  <option value="metric"  selected="selected"><?php _e('Metric',DOMAIN);?></option>
-	  <option value="imperial"><?php _e('Imperial',DOMAIN);?></option>
+	  <option value="metric"  selected="selected"><?php _e('Metric','templatic');?></option>
+	  <option value="imperial"><?php _e('Imperial','templatic');?></option>
 	</select>
 
-	<input id="from-input" type="text" onblur="if (this.value == '') {this.value = '<?php _e('Enter Location',DOMAIN);?>';}" onfocus="if (this.value == '<?php _e('Enter Location',DOMAIN);?>') {this.value = '';}" value="<?php _e('Enter Location',DOMAIN);?>" /> 
+	<input id="from-input" type="text" onblur="if (this.value == '') {this.value = '<?php _e('Enter Location','templatic');?>';}" onfocus="if (this.value == '<?php _e('Enter Location','templatic');?>') {this.value = '';}" value="<?php _e('Enter Location','templatic');?>" /> 
 
-	<a href="javascript:void(0);" onclick="return set_direction_map()" class="b_getdirection getdir button" > <?php _e('Get Directions',DOMAIN);?> </a>
-	<a class="large_map b_getdirection button" target="_blank" href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=<?php echo $address;?>&amp;sll=<?php echo $geo_latitude;?>,<?php echo $geo_longitude;?>&amp;ie=UTF8&amp;hq=&amp;ll=<?php echo $geo_latitude;?>,<?php echo $geo_longitude;?>&amp;spn=0.368483,0.891953&amp;z=14&amp;iwloc=A"><?php _e('View Large Map',DOMAIN);?></a>
+	<a href="javascript:void(0);" onclick="return set_direction_map()" class="b_getdirection getdir button" > <?php _e('Get Directions','templatic');?> </a>
+	<a class="large_map b_getdirection button" target="_blank" href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=<?php echo $address;?>&amp;sll=<?php echo $geo_latitude;?>,<?php echo $geo_longitude;?>&amp;ie=UTF8&amp;hq=&amp;ll=<?php echo $geo_latitude;?>,<?php echo $geo_longitude;?>&amp;spn=0.368483,0.891953&amp;z=14&amp;iwloc=A"><?php _e('View Large Map','templatic');?></a>
 </form>
 <?php
 $address = get_post_meta($post->ID,'address',true);
@@ -55,9 +55,9 @@ function get_googlemap_directory(){
 }
 function set_direction_map()
 {
-	if(document.getElementById('from-input').value=='<?php _e('Enter Location',DOMAIN);?>' || document.getElementById('from-input').value=='')
+	if(document.getElementById('from-input').value=='<?php _e('Enter Location','templatic');?>' || document.getElementById('from-input').value=='')
 	{
-		alert("<?php _e('Please enter your address to get the direction map.',DOMAIN);?>");return false;
+		alert("<?php _e('Please enter your address to get the direction map.','templatic');?>");return false;
 	}else
 	{
 		document.getElementById('travel-mode-input').style.display='';
@@ -83,7 +83,7 @@ var Demo = {
 
   showDirections: function(dirResult, dirStatus) {
     if (dirStatus != google.maps.DirectionsStatus.OK) {
-      alert("<?php _e('Directions failed: ',DOMAIN); ?>" + dirStatus);
+      alert("<?php _e('Directions failed: ','templatic'); ?>" + dirStatus);
       return;
     }
 
@@ -104,7 +104,7 @@ var Demo = {
     }else if (value == 'transit') {
       value = google.maps.DirectionsTravelMode.TRANSIT;
     } else {
-      alert("<?php _e('Unsupported travel mode.',DOMAIN); ?>");
+      alert("<?php _e('Unsupported travel mode.','templatic'); ?>");
     }
     return value;
   },
@@ -186,7 +186,7 @@ function processSVData(data, status) {
 			panorama.setVisible(true);
 		});
 	} else {
-		alert("<?php _e('Street View data not found for this location.',DOMAIN); ?>");
+		alert("<?php _e('Street View data not found for this location.','templatic'); ?>");
 	}
 }
 function toggleStreetView() {
@@ -211,5 +211,5 @@ http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=<?php echo $address;
 
 
 
-<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="<?php echo $http; ?>maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=<?php echo $address;?>&amp;ie=UTF8&amp;hq=&amp;hnear=Surat,+Gujarat,+India&amp;ll=21.194655,72.557831&amp;spn=0.906514,1.783905&amp;z=10&amp;output=embed"></iframe><br /><small><a href="<?php echo $http; ?>maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=<?php echo $address;?>&amp;ie=UTF8&amp;hq=&amp;hnear=Surat,+Gujarat,+India&amp;ll=21.194655,72.557831&amp;spn=0.906514,1.783905&amp;z=10" style="color:#0000FF;text-align:left"><?php _e("View Larger Map",DOMAIN);?></a></small>
+<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="<?php echo $http; ?>maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=<?php echo $address;?>&amp;ie=UTF8&amp;hq=&amp;hnear=Surat,+Gujarat,+India&amp;ll=21.194655,72.557831&amp;spn=0.906514,1.783905&amp;z=10&amp;output=embed"></iframe><br /><small><a href="<?php echo $http; ?>maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=<?php echo $address;?>&amp;ie=UTF8&amp;hq=&amp;hnear=Surat,+Gujarat,+India&amp;ll=21.194655,72.557831&amp;spn=0.906514,1.783905&amp;z=10" style="color:#0000FF;text-align:left"><?php _e("View Larger Map",'templatic');?></a></small>
 <?php }?>

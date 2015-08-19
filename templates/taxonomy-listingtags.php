@@ -130,7 +130,7 @@ do_action( 'before_content' );
           	endwhile;
 			wp_reset_query(); 
 		else:?>
-          	<p class='nodata_msg'><?php _e( 'Apologies, but no results were found for the requested archive.', DIR_DOMAIN ); ?></p>              
+          	<p class='nodata_msg'><?php _e( 'Apologies, but no results were found for the requested archive.', 'templatic' ); ?></p>              
         <?php endif;
 		if($wp_query->max_num_pages !=1):?>
             <div id="listpagi">

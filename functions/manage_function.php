@@ -20,7 +20,7 @@ add_action('init','directory_init_function',99);
 function manage_function_script(){
 	global $pagenow,$post,$wp_query;
 	if(is_admin()){
-		wp_enqueue_script('function_script',array(TEVOLUTION_DIRECTORY_URL.'js/function_script.js',array( 'jquery' ),'',false));
+		wp_enqueue_script('function_script',TEVOLUTION_DIRECTORY_URL.'js/function_script.js',array( 'jquery' ),'',false);
 		wp_enqueue_script('thickbox');
 		wp_enqueue_style('thickbox');
 	}

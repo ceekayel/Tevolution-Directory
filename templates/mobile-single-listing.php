@@ -78,7 +78,7 @@ if(function_exists('bdw_get_images_plugin'))
 							<div style="display:none;" class="frontend_listing_logo"><?php echo $listing_logo?></div>
 							<!--input id="fronted_files_listing_logo" class="fronted_files" type="file" multiple="true" accept="image/*" /-->
 							<div id="fronted_upload_listing_logo" class="frontend_uploader button" data-src="<?php echo $listing_logo?>">	                 	
-								<span><?php _e( 'Upload ', DIR_DOMAIN ).$tmpl_flds_varname['listing_logo']['label']; ?></span>						
+								<span><?php _e( 'Upload ', 'templatic' ).$tmpl_flds_varname['listing_logo']['label']; ?></span>						
 							</div>
 						</div>
 					 <?php endif;	?>
@@ -95,7 +95,7 @@ if(function_exists('bdw_get_images_plugin'))
 							if($tmpdata['templatin_rating']=='yes'):
 								$total=get_post_total_rating(get_the_ID());
 								$total=($total=='')? 0: $total;
-								$review_text=($total==1 )? '<a id="reviews_show" href="#comments">'.__('Review',DIR_DOMAIN).'</a>': '<a id="reviews_show" href="#comments">'.$total.' '.__('Reviews',DIR_DOMAIN).'</a>';	?>
+								$review_text=($total==1 )? '<a id="reviews_show" href="#comments">'.__('Review','templatic').'</a>': '<a id="reviews_show" href="#comments">'.$total.' '.__('Reviews','templatic').'</a>';	?>
 							<div class="listing_rating">
 								<div class="directory_rating_row">
 									<span class="single_rating">
@@ -111,7 +111,7 @@ if(function_exists('bdw_get_images_plugin'))
 					<ul>             		
 							<?php if($phone!="" && $tmpl_flds_varname['phone'] || ($is_edit==1 && $tmpl_flds_varname['phone'])):?>
 							<li class="phone <?php echo $tmpl_flds_varname['phone']['style_class']; ?>">
-								<a href="tel:<?php echo $phone ?>" class="entry-phone frontend_phone listing_custom" <?php if($is_edit==1):?>contenteditable="true" <?php endif;?>><i class="fa fa-phone"></i> <?php echo _e('Call',DIR_DOMAIN);?></a>
+								<a href="tel:<?php echo $phone ?>" class="entry-phone frontend_phone listing_custom" <?php if($is_edit==1):?>contenteditable="true" <?php endif;?>><i class="fa fa-phone"></i> <?php echo _e('Call','templatic');?></a>
 							</li>
 							<?php endif; 
 							
@@ -159,6 +159,7 @@ if(function_exists('bdw_get_images_plugin'))
 							   ?>
 							</div>
 					</article>
+					
 				</section>
 			</header>
 		   
@@ -202,7 +203,7 @@ if(function_exists('bdw_get_images_plugin'))
 		</script>
 		   
 		<!--Code end for single captcha -->
-		
+
 		<!-- Image gallery -->
 		<section id="listing_gallery">
 		<!-- Image Gallery Div --> 	
@@ -254,7 +255,7 @@ if(function_exists('bdw_get_images_plugin'))
 		?>
 		</ul>
 		<div id="uploadimage" class="upload button secondary_btn clearfix">
-		<span><?php _e("Upload Images", DIR_DOMAIN); ?></span>					
+		<span><?php _e("Upload Images", 'templatic'); ?></span>					
 		</div>
 		</div>
 		
@@ -306,7 +307,7 @@ if(function_exists('bdw_get_images_plugin'))
 							<?php	do_action('dir_start_tabs');
 												
 							if(get_the_content()):?>	
-								<dd class="tmpl-accordion-navigation active"><a href="#listing_description" ><?php _e('Overview',DIR_DOMAIN);?></a>
+								<dd class="tmpl-accordion-navigation active"><a href="#listing_description" ><?php _e('Overview','templatic');?></a>
 									<div id="listing_description" class="content active">
 										<!--Overview Section Start -->
 											<div class="entry-content frontend-entry-content <?php if($is_edit==1):?>editblock listing_content <?php endif; if(!$thumb_img):?>content_listing<?php else:?>listing_content <?php endif;?>">
@@ -322,7 +323,7 @@ if(function_exists('bdw_get_images_plugin'))
 									</div>
 								</dd>
 							<?php if(@$tmpdata['direction_map']=='yes' && $listing_address):?>									
-								<dd class="tmpl-accordion-navigation"><a href="#listing_map"><?php _e('Map',DIR_DOMAIN);?></a>
+								<dd class="tmpl-accordion-navigation"><a href="#listing_map"><?php _e('Map','templatic');?></a>
 									<div id="listing_map" class="content">
 										<?php if($tmpdata['direction_map']=='yes' && $listing_address):?>
 											<!--Map Section Start -->
@@ -359,7 +360,7 @@ if(function_exists('bdw_get_images_plugin'))
 											<!--Video Code Start -->
 											<?php if($is_edit==1):
 													do_action('oembed_video_description');?>  		
-													<span id="frontend_edit_video" class="frontend_oembed_video button" ><?php _e('Edit Video',DIR_DOMAIN);?></span>
+													<span id="frontend_edit_video" class="frontend_oembed_video button" ><?php _e('Edit Video','templatic');?></span>
 													<input type="hidden" class="frontend_video" name="frontend_edit_video" value='<?php echo $video;?>' />
 											<?php endif;?>
 											<div class="frontend_edit_video"><?php             
@@ -394,7 +395,7 @@ if(function_exists('bdw_get_images_plugin'))
 
 									if(!empty($events_list)){
 									?>
-									<dd class="tmpl-accordion-navigation"><a href="#listing_event"><?php echo _e('Events',DIR_DOMAIN);?></a>
+									<dd class="tmpl-accordion-navigation"><a href="#listing_event"><?php echo _e('Events','templatic');?></a>
 										<div id="listing_event" class="content">
 											<?php echo tmpl_events_on_place_list_details_mobile($events_list,$post); ?>
 										</div>
@@ -453,6 +454,14 @@ if(function_exists('bdw_get_images_plugin'))
 
 		/* add action for display the next previous pagination */ 
 		do_action( 'after_entry' ); 
+		
+		/* call seller details widget above the post */
+			$instance = array(
+			 'post_type' => array($post_>post_type),
+			); 
+		  
+			/* call the instance search widget */
+			the_widget( 'TmplListingOwner', $instance );
 		
 		do_action('tmpl_single_post_pagination');
 ?>

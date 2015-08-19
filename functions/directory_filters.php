@@ -14,7 +14,7 @@ function directory_pre_get_posts($query){
 		$custom_taxonomy_tag = tevolution_get_taxonomy_tags();
 								
 		add_filter('posts_where', 'directory_sortby_where');	
-		if((!is_search() && ! is_author())&&  (isset($query->query_vars['post_type']) && in_array($query->query_vars['post_type'],$custom_post_type)  && $query->query_vars['post_type']==CUSTOM_POST_TYPE_LISTING && is_archive() || 
+		if(isset($_REQUEST['directory_sortby']) && $_REQUEST['directory_sortby'] !='' && (!is_search() && ! is_author())&&  (isset($query->query_vars['post_type']) && in_array($query->query_vars['post_type'],$custom_post_type)  && $query->query_vars['post_type']==CUSTOM_POST_TYPE_LISTING && is_archive() || 
 			(is_archive() && ((isset($current_term->taxonomy) && in_array($current_term->taxonomy,$custom_taxonomy)  && @$current_term->taxonomy=='listingcategory' || in_array($current_term->taxonomy,$custom_taxonomy_tag)  && @!in_array($current_term->taxonomy,array('etags','ptags'))))))){
 			add_filter('posts_orderby', 'directory_category_filter_orderby');
 		}elseif(isset($_REQUEST['directory_sortby']) && $_REQUEST['directory_sortby'] !='' && $query->query_vars['post_type']!= CUSTOM_POST_TYPE_LISTING && @$current_term->taxonomy !='listingcategory'){

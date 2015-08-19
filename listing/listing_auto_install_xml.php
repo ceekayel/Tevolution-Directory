@@ -37,8 +37,8 @@ class WXR_Parser {
 				echo $error[0] . ':' . $error[1] . ' ' . esc_html( $error[2] );
 			}
 			echo '</pre>';
-			echo '<p><strong>' . __( 'There was an error when reading this WXR file', ADMINDOMAIN ) . '</strong><br />';
-			echo __( 'Details are shown above. The importer will now try again with a different parser...', ADMINDOMAIN ) . '</p>';
+			echo '<p><strong>' . __( 'There was an error when reading this WXR file', 'templatic-admin' ) . '</strong><br />';
+			echo __( 'Details are shown above. The importer will now try again with a different parser...', 'templatic-admin' ) . '</p>';
 		}
 
 		/* use regular expressions if nothing else available or this is bad XML*/
@@ -67,7 +67,7 @@ class WXR_Parser_SimpleXML {
 		}
 
 		if ( ! $success || isset( $dom->doctype ) ) {
-			return new WP_Error( 'SimpleXML_parse_error', __( 'There was an error when reading this WXR file', ADMINDOMAIN ), libxml_get_errors() );
+			return new WP_Error( 'SimpleXML_parse_error', __( 'There was an error when reading this WXR file', 'templatic-admin' ), libxml_get_errors() );
 		}
 
 		$xml = simplexml_import_dom( $dom );
@@ -75,16 +75,16 @@ class WXR_Parser_SimpleXML {
 
 		/* halt if loading produces an error*/
 		if ( ! $xml )
-			return new WP_Error( 'SimpleXML_parse_error', __( 'There was an error when reading this WXR file', ADMINDOMAIN ), libxml_get_errors() );
+			return new WP_Error( 'SimpleXML_parse_error', __( 'There was an error when reading this WXR file', 'templatic-admin' ), libxml_get_errors() );
 
 		$wxr_version = $xml->xpath('/rss/channel/wp:wxr_version');
 		if ( ! $wxr_version )
-			return new WP_Error( 'WXR_parse_error', __( 'This does not appear to be a WXR file, missing/invalid WXR version number', ADMINDOMAIN ) );
+			return new WP_Error( 'WXR_parse_error', __( 'This does not appear to be a WXR file, missing/invalid WXR version number', 'templatic-admin' ) );
 
 		$wxr_version = (string) trim( $wxr_version[0] );
 		/* confirm that we are dealing with the correct file format*/
 		if ( ! preg_match( '/^\d+\.\d+$/', $wxr_version ) )
-			return new WP_Error( 'WXR_parse_error', __( 'This does not appear to be a WXR file, missing/invalid WXR version number', ADMINDOMAIN ) );
+			return new WP_Error( 'WXR_parse_error', __( 'This does not appear to be a WXR file, missing/invalid WXR version number', 'templatic-admin' ) );
 
 		$base_url = $xml->xpath('/rss/channel/wp:base_site_url');
 		$base_url = (string) trim( $base_url[0] );
@@ -274,7 +274,7 @@ class WXR_Parser_XML {
 		xml_parser_free( $xml );
 
 		if ( ! preg_match( '/^\d+\.\d+$/', $this->wxr_version ) )
-			return new WP_Error( 'WXR_parse_error', __( 'This does not appear to be a WXR file, missing/invalid WXR version number', ADMINDOMAIN ) );
+			return new WP_Error( 'WXR_parse_error', __( 'This does not appear to be a WXR file, missing/invalid WXR version number', 'templatic-admin' ) );
 
 		return array(
 			'authors' => $this->authors,
@@ -463,7 +463,7 @@ class WXR_Listing_Parser_Regex {
 		}
 
 		if ( ! $wxr_version )
-			return new WP_Error( 'WXR_parse_error', __( 'This does not appear to be a WXR file, missing/invalid WXR version number', ADMINDOMAIN ) );
+			return new WP_Error( 'WXR_parse_error', __( 'This does not appear to be a WXR file, missing/invalid WXR version number', 'templatic-admin' ) );
 
 		return array(
 			'authors' => $this->authors,
@@ -760,7 +760,7 @@ if ( class_exists( 'WP_Importer' ) ) {
 				foreach ( $import_data['posts'] as $post ) {
 					$login = sanitize_user( $post['post_author'], true );
 					if ( empty( $login ) ) {
-						printf( __( 'Failed to import author %s. Their posts will be attributed to the current user.', ADMINDOMAIN ), esc_html( $post['post_author'] ) );
+						printf( __( 'Failed to import author %s. Their posts will be attributed to the current user.', 'templatic-admin' ), esc_html( $post['post_author'] ) );
 						echo '<br />';
 						continue;
 					}
@@ -774,7 +774,7 @@ if ( class_exists( 'WP_Importer' ) ) {
 			}
 		}
 		function author_select( $n, $author ) {
-			echo __( 'Import author:', ADMINDOMAIN );
+			echo __( 'Import author:', 'templatic-admin' );
 			echo ' <strong>' . esc_html( $author['author_display_name'] );
 			if ( $this->version != '1.0' ) echo ' (' . esc_html( $author['author_login'] ) . ')';
 			echo '</strong><br />';
@@ -783,20 +783,20 @@ if ( class_exists( 'WP_Importer' ) ) {
 			$create_users = $this->allow_create_users();
 			if ( $create_users ) {
 				if ( $this->version != '1.0' ) {
-					echo __( 'or create new user with login name:', ADMINDOMAIN );
+					echo __( 'or create new user with login name:', 'templatic-admin' );
 					$value = '';
 				} else {
-					echo __( 'as a new user:', ADMINDOMAIN );
+					echo __( 'as a new user:', 'templatic-admin' );
 					$value = esc_attr( sanitize_user( $author['author_login'], true ) );
 				}
 
 				echo ' <input type="text" name="user_new['.$n.']" value="'. $value .'" /><br />';
 			}
 			if ( ! $create_users && $this->version == '1.0' )
-				echo __( 'assign posts to an existing user:', ADMINDOMAIN );
+				echo __( 'assign posts to an existing user:', 'templatic-admin' );
 			else
-				echo __( 'or assign posts to an existing user:', ADMINDOMAIN );
-			wp_dropdown_users( array( 'name' => "user_map[$n]", 'multi' => true, 'show_option_all' => __( '- Select -', ADMINDOMAIN ) ) );
+				echo __( 'or assign posts to an existing user:', 'templatic-admin' );
+			wp_dropdown_users( array( 'name' => "user_map[$n]", 'multi' => true, 'show_option_all' => __( '- Select -', 'templatic-admin' ) ) );
 			echo '<input type="hidden" name="imported_authors['.$n.']" value="' . esc_attr( $author['author_login'] ) . '" />';
 
 			if ( $this->version != '1.0' )
@@ -837,7 +837,7 @@ if ( class_exists( 'WP_Importer' ) ) {
 							$this->processed_authors[$old_id] = $user_id;
 						$this->author_mapping[$santized_old_login] = $user_id;
 					} else {
-						printf( __( 'Failed to create new user for %s. Their posts will be attributed to the current user.', ADMINDOMAIN ), esc_html($this->authors[$old_login]['author_display_name']) );
+						printf( __( 'Failed to create new user for %s. Their posts will be attributed to the current user.', 'templatic-admin' ), esc_html($this->authors[$old_login]['author_display_name']) );
 						if ( defined('IMPORT_DEBUG') && IMPORT_DEBUG )
 							echo ' ' . $user_id->get_error_message();
 						echo '<br />';
@@ -1131,7 +1131,7 @@ if ( class_exists( 'WP_Importer' ) ) {
 			}
 			/* no nav_menu term associated with this menu item*/
 			if ( ! $menu_slug ) {
-				echo __( 'Menu item skipped due to missing menu slug', ADMINDOMAIN );
+				echo __( 'Menu item skipped due to missing menu slug', 'templatic-admin' );
 				echo '<br />';
 				return;
 			}
@@ -1189,7 +1189,7 @@ if ( class_exists( 'WP_Importer' ) ) {
 			if ( $info = wp_check_filetype( $upload['file'] ) )
 				$post['post_mime_type'] = $info['type'];
 			else
-				return new WP_Error( 'attachment_processing_error', __('Invalid file type', ADMINDOMAIN) );
+				return new WP_Error( 'attachment_processing_error', __('Invalid file type', 'templatic-admin') );
 			$post['guid'] = $upload['url'];
 			/* as per wp-admin/includes/upload.php*/
 			$post_id = wp_insert_attachment( $post, $upload['file'] );
@@ -1334,7 +1334,7 @@ if(file_exists(WP_PLUGIN_DIR.'/Tevolution-Directory/listing-dummy-data.xml') ){
 	$directory_search_location_key2 = '';
 	//Search widget settings start
 	$directory_search_location[88] = array(
-						"title"				=>	__('Search Nearby Listings',DIR_DOMAIN),
+						"title"				=>	__('Search Nearby Listings','templatic'),
 						"post_type"			=>	array('listing'),
 						"miles_search"		=>	0,
 						"radius_measure"	=>	'miles',
@@ -1359,7 +1359,7 @@ if(file_exists(WP_PLUGIN_DIR.'/Tevolution-Directory/listing-dummy-data.xml') ){
 	//T → Search Near By Miles Range widget settings start
 	$directory_mile_range_widget = array();
 	$directory_mile_range_widget[1] = array(
-						"title"				=>	__("Filter Listings By Miles",DIR_DOMAIN),
+						"title"				=>	__("Filter Listings By Miles",'templatic'),
 						"max_range"			=>	500,
 						"post_type"			=>	'listing',
 						);						
@@ -1380,7 +1380,7 @@ if(file_exists(WP_PLUGIN_DIR.'/Tevolution-Directory/listing-dummy-data.xml') ){
 	//Browse by category widget settings start
 	$templatic_browse_by_categories = array();
 	$templatic_browse_by_categories[1] = array(
-						"title"				=>	__('Browse Listings By Category',DIR_DOMAIN),
+						"title"				=>	__('Browse Listings By Category','templatic'),
 						"post_type"			=>	'listing',
 						"categories_count"	=>	1,
 						);						
@@ -1425,7 +1425,7 @@ if(file_exists(WP_PLUGIN_DIR.'/Tevolution-Directory/listing-dummy-data.xml') ){
 	//T → In the neighborhood widget settings start
 	$directory_neighborhood = array();
 	$directory_neighborhood[1] = array(
-						"title"					=>	__('Nearest Listings',DIR_DOMAIN),
+						"title"					=>	__('Nearest Listings','templatic'),
 						"post_type"				=>	'listing',
 						"post_number"			=>	4,
 						"content_limit"			=>	34,
@@ -1450,7 +1450,7 @@ if(file_exists(WP_PLUGIN_DIR.'/Tevolution-Directory/listing-dummy-data.xml') ){
 	
 	//Search widget settings start
 	$directory_search_location[89] = array(
-						"title"				=>	__('Search Nearby Listings',DIR_DOMAIN),
+						"title"				=>	__('Search Nearby Listings','templatic'),
 						"post_type"			=>	array('listing'),
 						"miles_search"		=>	0,
 						"radius_measure"	=>	'miles',
@@ -1475,7 +1475,7 @@ if(file_exists(WP_PLUGIN_DIR.'/Tevolution-Directory/listing-dummy-data.xml') ){
 	
 	//Browse by category widget settings start
 	$templatic_browse_by_categories[2] = array(
-						"title"				=>	__('Browse Listings By Categories',DIR_DOMAIN),
+						"title"				=>	__('Browse Listings By Categories','templatic'),
 						"post_type"			=>	'listing',
 						"categories_count"	=>	1,
 						);						
@@ -1549,7 +1549,7 @@ function listing_sample_data_inserted()
 	?>
     <div class="classified-welcome-panel">
         <div class="tmpl-auto-install-yb">
-     	   <?php _e('Sample Data has been inserted.',DIR_DOMAIN); ?>
+     	   <?php _e('Sample Data has been inserted.','templatic'); ?>
         </div>
     </div>
     <?php

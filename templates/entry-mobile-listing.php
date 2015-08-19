@@ -3,7 +3,13 @@
 global $post;
  do_action('directory_before_post_loop');?>
 				 
-				<article class="post  <?php templ_post_class();?>" >  
+				<article <?php
+					if ((get_post_meta($post->ID, 'featured_h', true) == 'h')) {
+							  post_class('post featured_post ');
+					} else {
+							  post_class('post large-4 medium-4 small-6 xsmall-12 columns');
+					}
+					?>>  
 					<?php 
 					/* Hook to display before image */	
 					do_action('directory_before_category_page_image');

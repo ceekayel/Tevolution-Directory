@@ -15,9 +15,9 @@ function dir_page_view_options(){
 	$get_plug_data = get_option('templatic_settings');
 	$googlemap_setting=get_option('city_googlemap_setting'); ?>
 	  &nbsp;&nbsp;
-    <label for="default_page_view3" " <?php if($get_plug_data['category_googlemap_widget']!='yes') { ?> style="display:none;" <?php } ?>>
+    <label for="default_page_view3" <?php if($get_plug_data['category_googlemap_widget']!='yes') { ?> style="display:none;" <?php } ?>>
       <input type="radio" id="default_page_view3" name="default_page_view" value="mapview" <?php if( @$get_plug_data['default_page_view']== "" || @$get_plug_data['default_page_view']=='mapview') echo "checked=checked";?> />
-      <?php echo __('Map',THEME_DOMAIN); ?>
+      <?php echo __('Map','templatic'); ?>
     </label>
     <?php 
 }
@@ -29,17 +29,17 @@ add_action('after_listing_page_setting','directory_listing_map_setting');
 if( !function_exists( 'directory_listing_map_setting' ) ){
 function directory_listing_map_setting(){
 	$tmpdata = get_option('templatic_settings');
-	define('MAP_SETTINGS_TEXT',__('Map Settings',LMADMINDOMAIN));
+	define('MAP_SETTINGS_TEXT',__('Map Settings','templatic-admin'));
 	do_action('tmpl_before_pippoint_category_googlemap_widget');
 	?>
 	<tr>
-		 <th valign="top"><label><?php echo __('Map view',ADMINDOMAIN);?></label></th>
+		 <th valign="top"><label><?php echo __('Map view','templatic-admin');?></label></th>
 		 <td>
 			<div class="input-switch">
 			  <input type="checkbox" id="category_googlemap_widget" name="category_googlemap_widget" value="yes" <?php if($tmpdata['category_googlemap_widget']=='yes') echo 'checked';?> onclick="tmpl_show_pinpoint_script();"/>
-			  <label for="category_googlemap_widget">&nbsp;<?php echo __('Enable',ADMINDOMAIN);?></label>
+			  <label for="category_googlemap_widget">&nbsp;<?php echo __('Enable','templatic-admin');?></label>
 			</div>
-			  <p class="description"><?php echo __('Enable to show map tab on category pages. Disable to use "T -> Category Page Map" instead.',ADMINDOMAIN);?></p>
+			  <p class="description"><?php echo __('Enable to show map tab on category pages. Disable to use "T -> Category Page Map" instead.','templatic-admin');?></p>
 		 </td>
 	</tr>
 	<?php	
@@ -50,13 +50,13 @@ function directory_listing_map_setting(){
 		do_action('tmpl_after_pippoint_category_googlemap_widget'); 
 	?>
 	<tr id="tmpl_show_pinpoint" <?php echo $css; ?>>
-	  <th valign="top"><label><?php echo __('Pinpoint functionality',LMADMINDOMAIN);?></label></th>
+	  <th valign="top"><label><?php echo __('Pinpoint functionality','templatic-admin');?></label></th>
 	  <td>
 		<div class="input-switch">
 			<input id="pippoint_oncategory1" type="checkbox" value="1" <?php if(@$tmpdata['pippoint_oncategory']=='1') echo "checked=checked";?> name="pippoint_oncategory">
-			<label for="pippoint_oncategory1"><?php _e('Enable',LMADMINDOMAIN); ?></label>    
+			<label for="pippoint_oncategory1"><?php _e('Enable','templatic-admin'); ?></label>    
 		</div>
-		   <p class="description"><?php echo __('Pinpoint button allows you to focus the map on a specific entry. Only work with "Show Map view" above unchecked and the "T-> Category Page Map"',LMADMINDOMAIN);?></p>
+		   <p class="description"><?php echo __('Pinpoint button allows you to focus the map on a specific entry. Only work with "Show Map view" above unchecked and the "T-> Category Page Map"','templatic-admin');?></p>
 	  </td>
 	</tr>
 	<?php 
@@ -64,11 +64,11 @@ function directory_listing_map_setting(){
 		do_action('tmpl_before_pippoint_effects1');
 	?>
 	<tr id="tmpl_show_pinpoint_effect" <?php echo $css; ?>>
-	  <th valign="top"><label><?php echo __('Pinpoint activation',LMADMINDOMAIN);?></label></th>
+	  <th valign="top"><label><?php echo __('Pinpoint activation','templatic-admin');?></label></th>
 	  <td>
-		   <label for="pippoint_effects1"><input type="radio" id="pippoint_effects1" name="pippoint_effects" value="hover" <?php if($tmpdata['pippoint_effects']=='hover') echo "checked=checked";?> /> <?php echo __('Mouse hover',LMADMINDOMAIN); ?></label>&nbsp;&nbsp;&nbsp;
-				<label for="pippoint_effects2"><input type="radio" id="pippoint_effects2" name="pippoint_effects" value="click" <?php if($tmpdata['pippoint_effects']=='click') echo "checked=checked";?> /> <?php _e('Click',LMADMINDOMAIN); ?></label>
-			<p class="description"><?php echo sprintf(__('"Mouse hover" option will not work if you have "Show map view in category pages" option ( given above ) enabled. ', LMADMINDOMAIN));?></p>
+		   <label for="pippoint_effects1"><input type="radio" id="pippoint_effects1" name="pippoint_effects" value="hover" <?php if($tmpdata['pippoint_effects']=='hover') echo "checked=checked";?> /> <?php echo __('Mouse hover','templatic-admin'); ?></label>&nbsp;&nbsp;&nbsp;
+				<label for="pippoint_effects2"><input type="radio" id="pippoint_effects2" name="pippoint_effects" value="click" <?php if($tmpdata['pippoint_effects']=='click') echo "checked=checked";?> /> <?php _e('Click','templatic-admin'); ?></label>
+			<p class="description"><?php echo sprintf(__('"Mouse hover" option will not work if you have "Show map view in category pages" option ( given above ) enabled. ', 'templatic-admin'));?></p>
 	  </td>  
 	  </td>
 	</tr>
@@ -94,7 +94,7 @@ function googlemap_setting_add_page_menu(){
 		
 		echo '<div id="setting-error-settings_updated" class="updated settings-error">';
 		echo '<p>';
-		echo '<strong>'.__('Settings saved',ADMINDOMAIN).'</strong>';
+		echo '<strong>'.__('Settings saved','templatic-admin').'</strong>';
 		echo '</p>';
 		echo '</div>';
 	}
@@ -137,43 +137,43 @@ function googlemap_settings(){
 			
 			<tr valign="top">
 				<th colspan="2">
-					<div class="tevo_sub_title"><?php echo __('Single city map settings',ADMINDOMAIN);?></div>
+					<div class="tevo_sub_title"><?php echo __('Single city map settings','templatic-admin');?></div>
 				 </th>
 			</tr>
 			<?php do_action('tmpl_single_citysettings_start'); ?>
 			<tr valign="top">
-				<th scope="row"><label for="map_city_name"><?php echo __('City name',ADMINDOMAIN);?></label></th>
+				<th scope="row"><label for="map_city_name"><?php echo __('City name','templatic-admin');?></label></th>
 				 <td><input id="map_city_name" type="text" name="map_city_name" value="<?php echo $googlemap_setting['map_city_name'];?>" /></td>
 			</tr>
 			<tr valign="top">
-				<th scope="row"><label for="map_city_latitude"><?php echo __('City latitude',ADMINDOMAIN);?></label></th>
-				 <td><input id="map_city_latitude" type="text" name="map_city_latitude" value="<?php echo $googlemap_setting['map_city_latitude'];?>" /><p class="description"><?php echo __('Enter the latitude for the city defined above. Generate the value using',ADMINDOMAIN).' <a href="http://itouchmap.com/latlong.html" target="_blank">'.__('this website',ADMINDOMAIN).'</a>'; ?></p></td>
+				<th scope="row"><label for="map_city_latitude"><?php echo __('City latitude','templatic-admin');?></label></th>
+				 <td><input id="map_city_latitude" type="text" name="map_city_latitude" value="<?php echo $googlemap_setting['map_city_latitude'];?>" /><p class="description"><?php echo __('Enter the latitude for the city defined above. Generate the value using','templatic-admin').' <a href="http://itouchmap.com/latlong.html" target="_blank">'.__('this website','templatic-admin').'</a>'; ?></p></td>
 			</tr>
 			<tr valign="top">
-				<th scope="row"><label for="map_city_longitude"><?php echo __('City longitude',ADMINDOMAIN);?></label></th>
-				 <td><input id="map_city_longitude" type="text" name="map_city_longitude" value="<?php echo $googlemap_setting['map_city_longitude'];?>" /><p class="description"><?php echo __('Enter the longitude for the city defined above. Generate the value using',ADMINDOMAIN).' <a href="http://itouchmap.com/latlong.html" target="_blank">'.__('this website',ADMINDOMAIN).'</a>';?></p></td>
+				<th scope="row"><label for="map_city_longitude"><?php echo __('City longitude','templatic-admin');?></label></th>
+				 <td><input id="map_city_longitude" type="text" name="map_city_longitude" value="<?php echo $googlemap_setting['map_city_longitude'];?>" /><p class="description"><?php echo __('Enter the longitude for the city defined above. Generate the value using','templatic-admin').' <a href="http://itouchmap.com/latlong.html" target="_blank">'.__('this website','templatic-admin').'</a>';?></p></td>
 			</tr>
 			<tr valign="top">
-				<th scope="row"><label for="map_city_type"><?php echo __('Map type',ADMINDOMAIN);?></label></th>
+				<th scope="row"><label for="map_city_type"><?php echo __('Map type','templatic-admin');?></label></th>
 				 <td>
 					  <fieldset> 
-						   <label for="roadmap"><input type="radio" id="roadmap" name="map_city_type" value="ROADMAP" <?php if($googlemap_setting['map_city_type']=='ROADMAP'){echo 'checked';}?>  /><?php echo __('Road Map',ADMINDOMAIN);?></label>
+						   <label for="roadmap"><input type="radio" id="roadmap" name="map_city_type" value="ROADMAP" <?php if($googlemap_setting['map_city_type']=='ROADMAP'){echo 'checked';}?>  /><?php echo __('Road Map','templatic-admin');?></label>
 						   
-						   <label for="terrain"><input type="radio" id="terrain" name="map_city_type" value="TERRAIN" <?php if($googlemap_setting['map_city_type']=='TERRAIN'){echo 'checked';}?>/><?php echo __('Terrain Map',ADMINDOMAIN);?></label>
+						   <label for="terrain"><input type="radio" id="terrain" name="map_city_type" value="TERRAIN" <?php if($googlemap_setting['map_city_type']=='TERRAIN'){echo 'checked';}?>/><?php echo __('Terrain Map','templatic-admin');?></label>
 						   
-						   <label for="satellite"><input type="radio" id="satellite" name="map_city_type" value="SATELLITE" <?php if($googlemap_setting['map_city_type']=='SATELLITE'){echo 'checked';}?>/><?php echo __('Satellite Map',ADMINDOMAIN);?></label>
+						   <label for="satellite"><input type="radio" id="satellite" name="map_city_type" value="SATELLITE" <?php if($googlemap_setting['map_city_type']=='SATELLITE'){echo 'checked';}?>/><?php echo __('Satellite Map','templatic-admin');?></label>
 						   
-					  </fieldset> <p class="description"><?php echo __('The selection made here will affect your homepage and category page map.',ADMINDOMAIN)?></p> 
+					  </fieldset> <p class="description"><?php echo __('The selection made here will affect your homepage and category page map.','templatic-admin')?></p> 
 											
 					</td>
 			</tr>
 			 <tr valign="top">
-				<th scope="row"><label for="map_city_display"><?php echo __('Map display',ADMINDOMAIN);?></label></th>
+				<th scope="row"><label for="map_city_display"><?php echo __('Map display','templatic-admin');?></label></th>
 				 <td>
 					<fieldset>
-						   <label for="set_zooming_opt"> <input type="radio" id="set_zooming_opt" name="set_zooming_opt" value="0"  <?php if($googlemap_setting['set_zooming_opt']=='0'){echo 'checked';}?> onclick="tmpl_change_option(this.id);"/><?php echo __('According to Map Scaling factor',ADMINDOMAIN);?></label>                 
-						   <label for="set_zooming_opt1"><input type="radio" id="set_zooming_opt1" name="set_zooming_opt"  value="1" <?php if($googlemap_setting['set_zooming_opt']=='1'){echo 'checked';}?> onclick="tmpl_change_option(this.id);" /><?php echo __('Fit all available listings',ADMINDOMAIN);?></label>
-					  </fieldset> <p class="description"><?php echo __('If "Fit all available listings" is selected the map scaling factor set above is ignored. The zoom factor will be set automatically so that all listings fit the screen.',ADMINDOMAIN)?></p>                        	
+						   <label for="set_zooming_opt"> <input type="radio" id="set_zooming_opt" name="set_zooming_opt" value="0"  <?php if($googlemap_setting['set_zooming_opt']=='0'){echo 'checked';}?> onclick="tmpl_change_option(this.id);"/><?php echo __('According to Map Scaling factor','templatic-admin');?></label>                 
+						   <label for="set_zooming_opt1"><input type="radio" id="set_zooming_opt1" name="set_zooming_opt"  value="1" <?php if($googlemap_setting['set_zooming_opt']=='1'){echo 'checked';}?> onclick="tmpl_change_option(this.id);" /><?php echo __('Fit all available listings','templatic-admin');?></label>
+					  </fieldset> <p class="description"><?php echo __('If "Fit all available listings" is selected the map scaling factor set above is ignored. The zoom factor will be set automatically so that all listings fit the screen.','templatic-admin')?></p>                        	
 				 </td>
 			</tr>
 			<?php
@@ -185,7 +185,7 @@ function googlemap_settings(){
 			?>
 			
 			<tr valign="top">
-				<th scope="row" id="tmpl_fids1" <?php echo $style; ?>><label for="map_city_scaling_factor"><?php echo __('Map scaling factor',ADMINDOMAIN);?></label></th>
+				<th scope="row" id="tmpl_fids1" <?php echo $style; ?>><label for="map_city_scaling_factor"><?php echo __('Map scaling factor','templatic-admin');?></label></th>
 				 <td id="tmpl_fids" <?php echo $style; ?>>
 					<select id="map_city_scaling_factor" name="map_city_scaling_factor">
 						<?php for($sf=1; $sf < 20 ; $sf++){ ?>
@@ -195,7 +195,7 @@ function googlemap_settings(){
 							?>
 							<option value="<?php echo $sf; ?>" <?php echo $sel; ?>><?php echo $sf; ?></option>
 						<?php } ?>							
-				</select> <p class="description"><?php echo __('Set to zoom level for the map. The higher the number, the larger the zoom. To show a city area set the factor to around 13.',ADMINDOMAIN)?></p>                         	
+				</select> <p class="description"><?php echo __('Set to zoom level for the map. The higher the number, the larger the zoom. To show a city area set the factor to around 13.','templatic-admin')?></p>                         	
 				  </td>
 			</tr>
 			<?php do_action('tmpl_single_citysettings_end');
@@ -219,8 +219,8 @@ function google_maps_widgets_init()
  */
 class widget_homepagemap extends WP_Widget {
 	function widget_homepagemap() {	
-		$widget_ops = array('classname' => 'widget homepagemap', 'description' => __('Use it while operating a single city. Edit the map location in Tevolution &raquo; map settings. Widget works best inside the Homepage Slider or Homepage - Main Content area.',ADMINDOMAIN) );		
-		$this->WP_Widget('homepagemap', __('T &rarr; Homepage Map - single city',ADMINDOMAIN), $widget_ops);
+		$widget_ops = array('classname' => 'widget homepagemap', 'description' => __('Use it while operating a single city. Edit the map location in Tevolution &raquo; map settings. Widget works best inside the Homepage Slider or Homepage - Main Content area.','templatic-admin') );		
+		$this->WP_Widget('homepagemap', __('T &rarr; Homepage Map - single city','templatic-admin'), $widget_ops);
 	}
 	function widget($args, $instance) {
 		global $wp_query,$clustering;
@@ -246,16 +246,16 @@ class widget_homepagemap extends WP_Widget {
                          <div id="map_marker_nofound" style="display:none;">
 							<?php 
 								echo '<h3>';
-									_e('No Records Found',DOMAIN);
+									_e('No Records Found','templatic');
 								echo '</h3><p>';
-									_e('Sorry, no records were found. Please adjust your search criteria and try again.',DOMAIN);
+									_e('Sorry, no records were found. Please adjust your search criteria and try again.','templatic');
 								echo '</p>'; 
 							?>
 						 </div>     
                     </div>             
                
                     <form id="ajaxform" name="slider_search" class="pe_advsearch_form" action="javascript:void(0);"  onsubmit="return(googlemap_ajaxSearch());">
-                    	<div class="paf_search"><input  type="text" class="" id="search_string" name="search_string" value="" placeholder="<?php _e('Title or Keyword',DOMAIN);?>" onclick="this.placeholder=''" onmouseover="this.placeholder='<?php _e('Title or Keyword',DOMAIN);?>'"/></div>
+                    	<div class="paf_search"><input  type="text" class="" id="search_string" name="search_string" value="" placeholder="<?php _e('Title or Keyword','templatic');?>" onclick="this.placeholder=''" onmouseover="this.placeholder='<?php _e('Title or Keyword','templatic');?>'"/></div>
 					<?php 
 			
 					if($post_type):
@@ -268,8 +268,8 @@ class widget_homepagemap extends WP_Widget {
 								 
 										$name = $obj->labels->name; /* to get taxonomy name */
 										if (function_exists('icl_register_string')) {									
-											icl_register_string(DOMAIN, $name,$name);
-											$name = icl_t(DOMAIN, $name,$name);		
+											icl_register_string('templatic', $name,$name);
+											$name = icl_t('templatic', $name,$name);		
 										}
 										?>
                                         <div class="mw_cat_title">
@@ -323,12 +323,12 @@ class widget_homepagemap extends WP_Widget {
 		$clustering = strip_tags($instance['clustering']);		
 		?>
           <p>
-               <label for="<?php echo $this->get_field_id('height'); ?>"><?php echo __('Map Height <small>(default height: 425px) to change, only enter a numeric value.)</small>',ADMINDOMAIN);?>:
+               <label for="<?php echo $this->get_field_id('height'); ?>"><?php echo __('Map Height <small>(default height: 425px) to change, only enter a numeric value.)</small>','templatic-admin');?>:
                <input class="widefat" id="<?php echo $this->get_field_id('height'); ?>" name="<?php echo $this->get_field_name('height'); ?>" type="text" value="<?php echo esc_attr($height); ?>" />
                </label>
           </p>
           <div class="googlemap_post_type clearfix">
-               <span><label for="<?php echo $this->get_field_id('post_type');?>" ><?php _e('Select Post:',ADMINDOMAIN);?>     </label></span>
+               <span><label for="<?php echo $this->get_field_id('post_type');?>" ><?php _e('Select Post:','templatic-admin');?>     </label></span>
                <span>	               
                <?php
                $all_post_types = get_option("templatic_custom_post");
@@ -342,7 +342,7 @@ class widget_homepagemap extends WP_Widget {
           </div>
           
           <div class="">
-          	<span><label for="<?php echo $this->get_field_id('post_type_category');?>" ><?php _e('Categories:',ADMINDOMAIN);?>     </label></span>
+          	<span><label for="<?php echo $this->get_field_id('post_type_category');?>" ><?php _e('Categories:','templatic-admin');?>     </label></span>
                <div class="element wp-tab-panel" id="<?php echo $this->get_field_id('single_field_category'); ?>" style="height:300px;overflow-y: scroll; margin-bottom:5px;">
 				 <?php 
                          $post_types = get_option("templatic_custom_post");
@@ -380,7 +380,7 @@ class widget_homepagemap extends WP_Widget {
 		<?php if($clustering) { $checked = "checked=checked"; }else{ $checked =''; } ?>
 		 <label for="<?php echo $this->get_field_id('clustering'); ?>">
 		 <input id="<?php echo $this->get_field_id('clustering'); ?>" name="<?php echo $this->get_field_name('clustering'); ?>" type="checkbox" value="1" <?php echo $checked; ?>/>
-		 <?php echo __('Disable Clustering','lm-templatic-admin'); ?></label>
+		 <?php echo __('Disable Clustering','templatic-admin'); ?></label>
 	    </p>
         <script  type="text/javascript" async >
 	    function get_single_city_categories_checklist(str,city_id,single_category,post_type){
@@ -434,8 +434,8 @@ class widget_homepagemap extends WP_Widget {
  */
 class widget_listingpagemap extends WP_Widget {
 	function widget_listingpagemap() {	
-		$widget_ops = array('classname' => 'widget listingpagemap', 'description' => __('Show a map on category pages while operating a single city. Use in category page sidebar and category page - below header areas.',ADMINDOMAIN) );		
-		$this->WP_Widget('listingpagemap', __('T &rarr; Category Page Map - single city',ADMINDOMAIN), $widget_ops);
+		$widget_ops = array('classname' => 'widget listingpagemap', 'description' => __('Show a map on category pages while operating a single city. Use in category page sidebar and category page - below header areas.','templatic-admin') );		
+		$this->WP_Widget('listingpagemap', __('T &rarr; Category Page Map - single city','templatic-admin'), $widget_ops);
 	}
 	function widget($map_args, $instance) {
 		global $wp_query;
@@ -557,7 +557,7 @@ class widget_listingpagemap extends WP_Widget {
 				
 				$image_class=($post_image)?'map-image' :'';
 				$comment_count= count(get_comments(array('post_id' => $ID)));
-				$review=($comment_count ==1 )? __('review',ADMINDOMAIN):__('reviews',ADMINDOMAIN);
+				$review=($comment_count ==1 )? __('review','templatic-admin'):__('reviews','templatic-admin');
 				if($lat && $lng && !in_array($post_id,$pids))
 				{ 
 					$retstr ="{";
@@ -732,7 +732,7 @@ class widget_listingpagemap extends WP_Widget {
 		
 		?>
 		<p>
-		   <label for="<?php echo $this->get_field_id('height'); ?>"><?php echo __('Map Height <small>(default height: 425px) to change, only enter a numeric value.)</small>',ADMINDOMAIN);?>:
+		   <label for="<?php echo $this->get_field_id('height'); ?>"><?php echo __('Map Height <small>(default height: 425px) to change, only enter a numeric value.)</small>','templatic-admin');?>:
 		   <input class="widefat" id="<?php echo $this->get_field_id('height'); ?>" name="<?php echo $this->get_field_name('height'); ?>" type="text" value="<?php echo esc_attr($height); ?>" />
 		   </label>
 		</p>
@@ -740,12 +740,12 @@ class widget_listingpagemap extends WP_Widget {
 		<p>
 			<?php if($clustering) { $checked = "checked=checked"; }else{ $checked =''; } ?>
 			<label for="<?php echo $this->get_field_id('clustering'); ?>">
-			<input  id="<?php echo $this->get_field_id('clustering'); ?>" name="<?php echo $this->get_field_name('clustering'); ?>" type="checkbox" value="1" <?php echo $checked; ?>/>&nbsp;<?php echo __('Disable Clustering','lm-templatic-admin');?></label>
+			<input  id="<?php echo $this->get_field_id('clustering'); ?>" name="<?php echo $this->get_field_name('clustering'); ?>" type="checkbox" value="1" <?php echo $checked; ?>/>&nbsp;<?php echo __('Disable Clustering','templatic-admin');?></label>
 	    </p>
 		
 		<p>
-		   <label id="<?php echo $this->get_field_id('show_all_posts'); ?>"><input type="checkbox" id="<?php echo $this->get_field_id('show_all_posts'); ?>" name="<?php echo $this->get_field_name('show_all_posts'); ?>" value="yes" <?php if(@$show_all_posts =='yes') echo 'checked';?>/>&nbsp;<?php echo __('Show all posts on category map',ADMINDOMAIN);?></label>
-            <p class="description"><?php echo __('With large categories this can significantly increase category page load time. When this option is disabled, the map will only show posts from the current page.',ADMINDOMAIN);?></p>
+		   <label id="<?php echo $this->get_field_id('show_all_posts'); ?>"><input type="checkbox" id="<?php echo $this->get_field_id('show_all_posts'); ?>" name="<?php echo $this->get_field_name('show_all_posts'); ?>" value="yes" <?php if(@$show_all_posts =='yes') echo 'checked';?>/>&nbsp;<?php echo __('Show all posts on category map','templatic-admin');?></label>
+            <p class="description"><?php echo __('With large categories this can significantly increase category page load time. When this option is disabled, the map will only show posts from the current page.','templatic-admin');?></p>
 		</p>
 	    <?php
 	}
@@ -939,7 +939,7 @@ function google_map_initialize(){
 						
 						$image_class=($post_image)?'map-image' :'';
 						$comment_count= count(get_comments(array('post_id' => $ID)));
-						$review=($comment_count ==1 )? __('review',DOMAIN):__('reviews',DOMAIN);
+						$review=($comment_count ==1 )? __('review','templatic'):__('reviews','templatic');
 						if(($lat && $lng )&& !in_array($ID,$pids))
 						{ 	
 							$retstr ='{';
@@ -1061,7 +1061,7 @@ function get_single_location_category_checklist($post_type,$pid,$mod='',$select_
 		if($select_all == 'select_all')
 		{
 		?>
-		<li><label for="selectall"><input type="checkbox" name="<?php echo $single_category;?>[]" id="selectall" value="all" class="checkbox" onclick="single_city_displaychk_frm('<?php echo $single_category;?>');" <?php if( @$pid[0]){ if(in_array('all',$pid)){ echo "checked=checked"; } }else{  }?>/>&nbsp;<?php echo __("Select All",'lm-templatic-admin'); ?></label></li>
+		<li><label for="selectall"><input type="checkbox" name="<?php echo $single_category;?>[]" id="selectall" value="all" class="checkbox" onclick="single_city_displaychk_frm('<?php echo $single_category;?>');" <?php if( @$pid[0]){ if(in_array('all',$pid)){ echo "checked=checked"; } }else{  }?>/>&nbsp;<?php echo __("Select All",'templatic-admin'); ?></label></li>
 		<?php
 		}
 		foreach ($wpcategories as $wpcat)
@@ -1069,7 +1069,7 @@ function get_single_location_category_checklist($post_type,$pid,$mod='',$select_
 			if($counter ==0){ 
 				$tname = $taxonomy_details[$post_taxonomy]['label']; 
 				if($post_taxonomy =='category' || $post_taxonomy ==''): ?>
-				<li><label style="font-weight:bold;"><?php _e('Categories','lm-templatic-admin'); ?></label></li>
+				<li><label style="font-weight:bold;"><?php _e('Categories','templatic-admin'); ?></label></li>
 				<?php else:?>
 						<li><label style="font-weight:bold;"><?php echo $tname; ?></label></li>
 			<?php 	
@@ -1170,7 +1170,7 @@ function get_single_location_category_checklist($post_type,$pid,$mod='',$select_
 				}		
 }
 	echo "</ul>"; } else{
-			sprintf(__('There is no categories in %s','lm-templatic-admin'),$post_type);
+			sprintf(__('There is no categories in %s','templatic-admin'),$post_type);
 	}
 	
 	if(is_plugin_active('sitepress-multilingual-cms/sitepress.php')){
@@ -1191,7 +1191,7 @@ function get_single_city_categories_callback(){
 		$_COOKIE['_icl_current_language']=$_REQUEST['lang'];
 	}
 	if(empty($_REQUEST['post_type']) || $_REQUEST['post_type']==""){
-		echo '<ul><li>'.__("Please select any post type.",'lm-templatic-admin').'</li></ul>';			
+		echo '<ul><li>'.__("Please select any post type.",'templatic-admin').'</li></ul>';			
 		exit;
 	}
 	$my_post_type = explode(",",$_REQUEST['post_type']);
@@ -1282,7 +1282,7 @@ function tevolution_tmpl_mapcenter_lang($long)
 
 add_action('tevolution_after_subsettings','tevolution_after_subsettings_li');
 function tevolution_after_subsettings_li(){ ?>
-	<li class="submit_page_settings"><a id="map_settings" href="javascript:void(0);"><?php _e('Map Settings',ADMINDOMAIN); ?></a></li>
+	<li class="submit_page_settings"><a id="map_settings" href="javascript:void(0);"><?php _e('Map Settings','templatic-admin'); ?></a></li>
 <?php
 } 
 
@@ -1297,25 +1297,25 @@ function templatic_general_setting_data_mapsetting(){
 	<table id="map_settings" class="tmpl-general-settings form-table">
 	<?php do_action('tmpl_after_mapsettings_submenu'); ?>
 	<tr>
-		<th valign="top"><label><?php echo __('Hide maps on mobile devices',ADMINDOMAIN); ?></label></th>
+		<th valign="top"><label><?php echo __('Hide maps on mobile devices','templatic-admin'); ?></label></th>
 		<td>
 			<div class="input-switch">
 				<input type="checkbox" id="google_map_show" name="google_map_show" value="yes" <?php if( @$templatic_settings['google_map_show']=='yes') echo 'checked';?>/>
-				<label for="google_map_show">&nbsp;<?php echo __('Enable',ADMINDOMAIN);?></label><br/> 
+				<label for="google_map_show">&nbsp;<?php echo __('Enable','templatic-admin');?></label><br/> 
 			</div>
-			<p class="description"><?php echo __('With this option enabled, maps won&rsquo;t be shown on mobile phones and tablets.',ADMINDOMAIN);?></p>
+			<p class="description"><?php echo __('With this option enabled, maps won&rsquo;t be shown on mobile phones and tablets.','templatic-admin');?></p>
 		</td>
 	</tr>
 	<?php 
 	if(current_theme_supports('map_fullwidth_support')) :?>		
 	<tr>
-		<th valign="top"><label><?php echo __('Show map in full width',ADMINDOMAIN);?></label></th>
+		<th valign="top"><label><?php echo __('Show map in full width','templatic-admin');?></label></th>
 		<td>
 			<div class="input-switch">
 				<input type="checkbox" id="google_map_full_width" name="google_map_full_width" value="yes" <?php if($templatic_settings['google_map_full_width']=='yes') echo 'checked';?>/>
-				<label for="google_map_full_width">&nbsp;<?php echo __('Enable',ADMINDOMAIN);?></label><br/>       
+				<label for="google_map_full_width">&nbsp;<?php echo __('Enable','templatic-admin');?></label><br/>       
 			</div>
-			<p class="description"><?php echo __("Along with the homepage map, this setting will stretch any widget placed inside the 'Homepage Slider' and 'Category Page - Below Header' widget areas to full page width.  ",DOMAIN);?></p>
+			<p class="description"><?php echo __("Along with the homepage map, this setting will stretch any widget placed inside the 'Homepage Slider' and 'Category Page - Below Header' widget areas to full page width.  ",'templatic');?></p>
 		</td>
 	</tr>
 	<?php
@@ -1325,7 +1325,7 @@ function templatic_general_setting_data_mapsetting(){
 	<tr>
 		<td colspan="2">
 			<p class="submit" style="clear: both;">
-			<input type="submit" name="Submit"  class="button button-primary button-hero" value="<?php echo __('Save All Settings',ADMINDOMAIN);?>" />
+			<input type="submit" name="Submit"  class="button button-primary button-hero" value="<?php echo __('Save All Settings','templatic-admin');?>" />
 			<input type="hidden" name="settings-submit" value="Y" />
 			</p>
 		</td>
@@ -1341,16 +1341,17 @@ add_action('before_related_post','tmpl_detailpage_direction_map');
 function tmpl_detailpage_direction_map(){
 	
 	global $templatic_settings;
-	do_action('tmpl_before_direction_map'); 
+	$templatic_settings = get_option('templatic_settings');
+	do_action('tmpl_before_direction_map');
 	?>
 	<tr>
-		<th valign="top"><label><?php echo __("Show 'Map' tab",ADMINDOMAIN);?></label></th>
+		<th valign="top"><label><?php echo __("Show 'Map' tab",'templatic-admin');?></label></th>
 		<td>
 			<div class="input-switch">
 				<input type="checkbox" id="direction_map" name="direction_map" value="yes" <?php if($templatic_settings['direction_map']=='yes') echo 'checked';?>/>
-				<label for="direction_map">&nbsp;<?php echo __('Enable',ADMINDOMAIN);?></label><br/>
+				<label for="direction_map">&nbsp;<?php echo __('Enable','templatic-admin');?></label><br/>
 			</div>
-			<p class="description"><?php echo __("Enable to show the 'Map' tab (where available) above listing description. Disable to use the 'T > Detail Page Map' widget in the sidebar area instead.",ADMINDOMAIN);?></p>
+			<p class="description"><?php echo __("Enable to show the 'Map' tab (where available) above listing description. Disable to use the 'T > Detail Page Map' widget in the sidebar area instead.",'templatic-admin');?></p>
 		</td>
 	</tr>
 	<?php

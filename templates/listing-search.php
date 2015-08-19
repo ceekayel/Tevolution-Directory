@@ -32,7 +32,7 @@ get_header(); /*Header Portion*/
 	}	
 	?>
 	<header class="page-header extra-search-criteria-title">
-	  <h1 class="page-title"><?php printf( _e( 'Search Results for: ', DIR_DOMAIN ). '<span>' . get_search_query() . '</span><span>' . $radius. '</span>'); ?></h1>
+	  <h1 class="page-title"><?php printf( _e( 'Search Results for: ', 'templatic' ). '<span>' . get_search_query() . '</span><span>' . $radius. '</span>'); ?></h1>
 	  <?php do_action('after_search_result_label'); ?>
 	</header>
 	 
@@ -123,7 +123,7 @@ get_header(); /*Header Portion*/
           	endwhile; 
 			wp_reset_query();
 			else: ?>
-				<p class='nodata_msg'><?php _e( 'Sorry! No results were found for the requested search. Try searching with some different keywords', DIR_DOMAIN ); ?></p>
+				<p class='nodata_msg'><?php _e( 'Sorry! No results were found for the requested search. Try searching with some different keywords', 'templatic' ); ?></p>
                
 				<?php get_template_part( 'directory-listing','search-form' ); 
 				

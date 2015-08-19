@@ -45,12 +45,12 @@ if( !class_exists('WPDirectoryUpdates') ) {
 			$remote_version = @$r->new_version;	  
 		 if (version_compare($this->plugin_version , $remote_version, '<'))
 		 {	
-			$new_version = version_compare($this->plugin_version , $remote_version, '<') ? __('There is a new version of Tevolution-Directory plugin available ', DIR_DOMAIN)  : '';
+			$new_version = version_compare($this->plugin_version , $remote_version, '<') ? __('There is a new version of Tevolution-Directory plugin available ', 'templatic')  : '';
 			  
 			  $ajax_url = esc_url( add_query_arg( array( 'slug' => 'directory', 'action' => 'directory' , '_ajax_nonce' => wp_create_nonce( 'directory' ), 'TB_iframe' => true ,'width'=>500,'height'=>400), admin_url( 'admin-ajax.php' ) ) );
 			  $file='DigitalDownloads/directory.php';
 			  $download= wp_nonce_url( self_admin_url('update.php?action=upgrade-plugin&plugin=').$file, 'upgrade-plugin_' . $file);
-			echo '<tr class="plugin-update-tr"><td colspan="3" class="plugin-update"><div class="update-message">' . $new_version .  ' <a href="'.$ajax_url.'" class="thickbox" title="Templatic directory Update">'.__('update now',DIR_DOMAIN).'</a></div></td></tr>';
+			echo '<tr class="plugin-update-tr"><td colspan="3" class="plugin-update"><div class="update-message">' . $new_version .  ' <a href="'.$ajax_url.'" class="thickbox" title="Templatic directory Update">'.__('update now','templatic').'</a></div></td></tr>';
 		
 		 }
 	}

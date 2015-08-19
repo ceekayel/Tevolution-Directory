@@ -1116,7 +1116,7 @@
 	</item>
 	
 	<item>
-		<title>Your listing title</title>
+		<title>Gotham Bar and Grill</title>
 		<link>http://templatic.net/directory/city/new-york/listing/your-listing-title/</link>
 		<pubDate>Wed, 31 Jul 2013 07:51:05 +0000</pubDate>
 		<dc:creator>templatic</dc:creator>
@@ -1335,7 +1335,7 @@
 	</item>
 	
 	<item>
-		<title>Your listing title 2</title>
+		<title>70 Greene Apartments</title>
 		<link>http://templatic.net/directory/city/new-york/listing/your-listing-title-2/</link>
 		<pubDate>Wed, 31 Jul 2013 07:51:05 +0000</pubDate>
 		<dc:creator>templatic</dc:creator>
@@ -1554,7 +1554,7 @@
 	</item>
 	
 		<item>
-		<title>Your listing title 3</title>
+		<title>Chelsea Lodge Suites</title>
 		<link>http://templatic.net/directory/city/new-york/listing/your-listing-title-3/</link>
 		<pubDate>Wed, 31 Jul 2013 07:51:05 +0000</pubDate>
 		<dc:creator>templatic</dc:creator>
@@ -1964,7 +1964,7 @@
 	</item>
 	
 	<item>
-		<title>Your sample listing 1</title>
+		<title>Benjamin Realty Group</title>
 		<link>http://templatic.net/directory/city/philadelphia/listing/your-sample-lisitng-1/</link>
 		<pubDate>Wed, 31 Jul 2013 07:36:24 +0000</pubDate>
 		<dc:creator>templatic</dc:creator>
@@ -2156,7 +2156,7 @@
 	</item>
 	
 	<item>
-		<title>Your sample listing 2</title>
+		<title>Lucey’s Lounge</title>
 		<link>http://templatic.net/directory/city/philadelphia/listing/your-sample-lisitng-2/</link>
 		<pubDate>Wed, 31 Jul 2013 07:36:24 +0000</pubDate>
 		<dc:creator>templatic</dc:creator>
@@ -2348,7 +2348,7 @@
 	</item>
 	
 		<item>
-		<title>Your sample listing 3</title>
+		<title>Gotham Bar and Grill</title>
 		<link>http://templatic.net/directory/city/philadelphia/listing/your-sample-lisitng-3/</link>
 		<pubDate>Wed, 31 Jul 2013 07:36:24 +0000</pubDate>
 		<dc:creator>templatic</dc:creator>
@@ -2973,7 +2973,7 @@
 	</item>
 	
 	<item>
-		<title>Your sample listing</title>
+		<title>Morgaine Residence</title>
 		<link>http://templatic.net/directory/city/san-fransisco/listing/your-sample-listing/</link>
 		<pubDate>Wed, 31 Jul 2013 07:54:31 +0000</pubDate>
 		<dc:creator>templatic</dc:creator>
@@ -3034,15 +3034,15 @@
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>address</wp:meta_key>
-			<wp:meta_value><![CDATA[1690 Broadway San Francisco, CA 94109]]></wp:meta_value>
+			<wp:meta_value><![CDATA[26 E 23rd St, Manhattan, NY 10010, USA]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>geo_latitude</wp:meta_key>
-			<wp:meta_value><![CDATA[37.795784]]></wp:meta_value>
+			<wp:meta_value><![CDATA[40.740535013678766]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>geo_longitude</wp:meta_key>
-			<wp:meta_value><![CDATA[-122.42495409999998]]></wp:meta_value>
+			<wp:meta_value><![CDATA[-73.98791700000004]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>featured_h</wp:meta_key>
@@ -3102,11 +3102,11 @@
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>zones_id</wp:meta_key>
-			<wp:meta_value><![CDATA[3682]]></wp:meta_value>
+			<wp:meta_value><![CDATA[3713]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>post_city_id</wp:meta_key>
-			<wp:meta_value><![CDATA[3]]></wp:meta_value>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>templ_event_ticket</wp:meta_key>

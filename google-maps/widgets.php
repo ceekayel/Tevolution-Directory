@@ -3,8 +3,6 @@
 /*
  * Common widgets for all tevolution add ons
  */
-if (!defined('DIR_DOMAIN'))
-          @define('DIR_DOMAIN', 'templatic');
 add_action('widgets_init', 'tmpl_plugin_reg_widgets');
 
 function tmpl_plugin_reg_widgets() {
@@ -25,8 +23,8 @@ class directory_neighborhood extends WP_Widget {
 
           function directory_neighborhood() {
                     /* Constructor */
-                    $widget_ops = array('classname' => 'widget In the neighborhood', 'description' => __('Display posts that are in the vicinity of the post that is currently displayed. Use in detail page sidebar areas.', DIR_DOMAIN));
-                    $this->WP_Widget('directory_neighborhood', __('T &rarr; In The Neighborhood', DIR_DOMAIN), $widget_ops);
+                    $widget_ops = array('classname' => 'widget In the neighborhood', 'description' => __('Display posts that are in the vicinity of the post that is currently displayed. Use in detail page sidebar areas.', 'templatic'));
+                    $this->WP_Widget('directory_neighborhood', __('T &rarr; In The Neighborhood', 'templatic'), $widget_ops);
           }
 
           function widget($args, $instance) {
@@ -34,7 +32,7 @@ class directory_neighborhood extends WP_Widget {
                     global $miles, $wpdb, $post, $single_post, $wp_query, $current_cityinfo;
                     global $current_post, $post_number;
                     $current_post = $post->ID;
-                    $title = empty($instance['title']) ? __("Nearest Listing", DIR_DOMAIN) : apply_filters('widget_title', $instance['title']);
+                    $title = empty($instance['title']) ? __("Nearest Listing", 'templatic') : apply_filters('widget_title', $instance['title']);
                     $post_type = empty($instance['post_type']) ? 'listing' : apply_filters('widget_post_type', $instance['post_type']);
                     $post_number = empty($instance['post_number']) ? '5' : apply_filters('widget_post_number', $instance['post_number']);
                     $radius = empty($instance['radius']) ? '0' : apply_filters('widget_radius', $instance['radius']);
@@ -111,7 +109,7 @@ class directory_neighborhood extends WP_Widget {
                                      }
                                      echo '</ul>';
                             else:
-                                      _e('Sorry! There is no near by results found', DIR_DOMAIN);
+                                      _e('Sorry! There is no near by results found', 'templatic');
                             endif;
                             remove_filter('posts_where', 'nearby_filter');
                             wp_reset_query();
@@ -128,7 +126,7 @@ class directory_neighborhood extends WP_Widget {
 
           function form($instance) {
                     /* widgetform in backend */
-                    $instance = wp_parse_args((array) $instance, array('title' => __("Nearest Listing", DIR_DOMAIN), 'post_type' => 'listing', 'post_number' => 5, 'closer_factor' => 2));
+                    $instance = wp_parse_args((array) $instance, array('title' => __("Nearest Listing", 'templatic'), 'post_type' => 'listing', 'post_number' => 5, 'closer_factor' => 2));
                     $title = strip_tags($instance['title']);
                     $post_type = strip_tags($instance['post_type']);
                     $post_number = strip_tags($instance['post_number']);
@@ -152,7 +150,7 @@ class directory_neighborhood extends WP_Widget {
   </label>
 </p>
 <p>
-  <label for="<?php echo $this->get_field_id('post_type'); ?>" ><?php echo __('Select Post:', DIR_DOMAIN); ?> </label>
+  <label for="<?php echo $this->get_field_id('post_type'); ?>" ><?php echo __('Select Post:', 'templatic'); ?> </label>
   <select  id="<?php echo $this->get_field_id('post_type'); ?>" name="<?php echo $this->get_field_name('post_type'); ?>" class="widefat">
     <?php
                               $all_post_types = get_option("templatic_custom_post");
@@ -165,59 +163,59 @@ class directory_neighborhood extends WP_Widget {
   </select>
 </p>
 <p>
-  <label for="<?php echo $this->get_field_id('post_number'); ?>"><?php echo __('Number of posts', DIR_DOMAIN); ?>
+  <label for="<?php echo $this->get_field_id('post_number'); ?>"><?php echo __('Number of posts', 'templatic'); ?>
     <input class="widefat" id="<?php echo $this->get_field_id('post_number'); ?>" name="<?php echo $this->get_field_name('post_number'); ?>" type="text" value="<?php echo esc_attr($post_number); ?>" />
   </label>
 </p>
 <p>
-  <label for="<?php echo $this->get_field_id('radius'); ?>"><?php echo __('Select Distance', DIR_DOMAIN); ?>
+  <label for="<?php echo $this->get_field_id('radius'); ?>"><?php echo __('Select Distance', 'templatic'); ?>
     <select id="<?php echo $this->get_field_id('radius'); ?>" name="<?php echo $this->get_field_name('radius'); ?>">
       <option value="1" <?php
                                    if (esc_attr($distance_factor) == '1') {
                                              echo 'selected="selected"';
                                    }
-                                   ?>><?php echo __('1', DIR_DOMAIN); ?></option>
+                                   ?>><?php echo __('1', 'templatic'); ?></option>
       <option value="5" <?php
                                    if (esc_attr($distance_factor) == '5') {
                                              echo 'selected="selected"';
                                    }
-                                   ?>><?php echo __('5', DIR_DOMAIN); ?></option>
+                                   ?>><?php echo __('5', 'templatic'); ?></option>
       <option value="10" <?php
                                    if (esc_attr($distance_factor) == '10') {
                                              echo 'selected="selected"';
                                    }
-                                   ?>><?php echo __('10', DIR_DOMAIN); ?></option>
+                                   ?>><?php echo __('10', 'templatic'); ?></option>
       <option value="100" <?php
                                    if (esc_attr($distance_factor) == '100') {
                                              echo 'selected="selected"';
                                    }
-                                   ?>><?php echo __('100', DIR_DOMAIN); ?></option>
+                                   ?>><?php echo __('100', 'templatic'); ?></option>
       <option value="1000" <?php
                                    if (esc_attr($distance_factor) == '1000') {
                                              echo 'selected="selected"';
                                    }
-                                   ?>><?php echo __('1000', DIR_DOMAIN); ?></option>
+                                   ?>><?php echo __('1000', 'templatic'); ?></option>
       <option value="5000" <?php
                                    if (esc_attr($distance_factor) == '5000') {
                                              echo 'selected="selected"';
                                    }
-                                   ?>><?php echo __('5000', DIR_DOMAIN); ?></option>
+                                   ?>><?php echo __('5000', 'templatic'); ?></option>
     </select>
   </label>
 </p>
 <p>
-  <label for="<?php echo $this->get_field_id('radius_measure'); ?>"><?php echo __('Display By', DIR_DOMAIN); ?>
+  <label for="<?php echo $this->get_field_id('radius_measure'); ?>"><?php echo __('Display By', 'templatic'); ?>
     <select id="<?php echo $this->get_field_id('radius_measure'); ?>" name="<?php echo $this->get_field_name('radius_measure'); ?>">
       <option value="kilometer" <?php
                                    if (esc_attr($radius_measure) == 'kilometer') {
                                              echo 'selected="selected"';
                                    }
-                                   ?>><?php echo __('Kilometers', DIR_DOMAIN); ?></option>
+                                   ?>><?php echo __('Kilometers', 'templatic'); ?></option>
       <option value="miles" <?php
                                    if (esc_attr($radius_measure) == 'miles') {
                                              echo 'selected="selected"';
                                    }
-                                   ?>><?php echo __('Miles', DIR_DOMAIN); ?></option>
+                                   ?>><?php echo __('Miles', 'templatic'); ?></option>
     </select>
   </label>
 </p>
@@ -403,7 +401,7 @@ class directory_featured_category_list extends WP_Widget {
 						<ul>
 						<?php echo $featured_catlist_list; ?>
 						<li class="view"> <a href="<?php echo get_term_link($parent, $taxonomies[0]); ?>">
-						<?php _e('View all &raquo;', DIR_DOMAIN) ?>
+						<?php _e('View all &raquo;', 'templatic') ?>
 						</a> </li>
 						</ul>
 						<?php
@@ -440,7 +438,7 @@ class directory_featured_category_list extends WP_Widget {
 						<ul>
 						<?php echo $featured_catlist_list; ?>
 						<li class="view"> <a href="<?php echo get_term_link($parent, $taxonomies[0]); ?>">
-						<?php _e('View all &raquo;', DIR_DOMAIN) ?>
+						<?php _e('View all &raquo;', 'templatic') ?>
 						</a> </li>
 						</ul>
 						<?php
@@ -453,7 +451,7 @@ class directory_featured_category_list extends WP_Widget {
 						}
 						}
 						} else {
-						echo '<p>' . __('Invalid Category.', DIR_DOMAIN) . '</p>';
+						echo '<p>' . __('Invalid Category.', 'templatic') . '</p>';
 						}
 					
 					?>
@@ -551,7 +549,7 @@ class directory_mile_range_widget extends WP_Widget {
                     $max_range = empty($instance['max_range']) ? '' : apply_filters('widget_max_range', $instance['max_range']);
                     $radius_measure = empty($instance['radius_measure']) ? 'miles' : apply_filters('widget_radius_measure', $instance['radius_measure']);
                     echo $before_widget;
-                    $search_txt = sprintf(__('Find a %s', DIR_DOMAIN), $post_type);
+                    $search_txt = sprintf(__('Find a %s', 'templatic'), $post_type);
                     wp_enqueue_script("jquery-ui-slider");
                     echo '<div class="search_nearby_widget">';
                     if ($title) {
@@ -575,14 +573,14 @@ class directory_mile_range_widget extends WP_Widget {
 <form method="get" id="searchform" action="<?php echo home_url(); ?>/">
   <input type="hidden"  class="miles_range_post_type" name="post_type" value="<?php echo $post_type; ?>" />
   <div class="search_range">
-    <input type="text" name="range_address" id="range_address" value="" class="range_address location placeholder" placeholder="<?php _e('Enter your address', DOMAIN); ?>"/>
+    <input type="text" name="range_address" id="range_address" value="" class="range_address location placeholder" placeholder="<?php _e('Enter your address', 'templatic'); ?>"/>
     <?php if ($radius_measure == "miles"): ?>
     <label>
-      <?php _e('Mile range:', DIR_DOMAIN); ?>
+      <?php _e('Mile range:', 'templatic'); ?>
     </label>
     <?php else: ?>
     <label>
-      <?php _e('Kilometer range:', DIR_DOMAIN); ?>
+      <?php _e('Kilometer range:', 'templatic'); ?>
     </label>
     <?php endif; ?>
     <input type="text" name="radius" id="radius_range" value="<?php echo $max_range; ?>" style="border:0; font-weight:bold;"  readonly="readonly"/>
@@ -873,7 +871,7 @@ class directory_featured_homepage_listing extends WP_Widget {
                     $link = empty($instance['link']) ? '#' : apply_filters('widget_link', $instance['link']);
                     $text = empty($instance['text']) ? '' : apply_filters('widget_text', $instance['text']);
                     $view = empty($instance['view']) ? 'list' : apply_filters('widget_view', $instance['view']);
-                    $more_text = empty($instance['more_text']) ? __('Read more', DIR_DOMAIN) : apply_filters('widget_view', $instance['more_text']);
+                    $more_text = empty($instance['more_text']) ? __('Read more', 'templatic') : apply_filters('widget_view', $instance['more_text']);
                     $sorting_options = empty($instance['sorting_options']) ? '' : apply_filters('widget_sorting_options', $instance['sorting_options']);
                     $content_limit = empty($instance['content_limit']) ? '' : apply_filters('widget_content_limit', $instance['content_limit']);
 
@@ -971,7 +969,11 @@ class directory_featured_homepage_listing extends WP_Widget {
 
                     $my_query = null;
 
-                    remove_filter('posts_orderby', 'home_page_feature_listing_orderby');
+                    if ($sorting_options == 'alphabetical') {
+
+						remove_filter('posts_orderby', 'home_page_feature_listing_orderby');
+
+					}
 
                     if (is_plugin_active('Tevolution-LocationManager/location-manager.php')) {
                               $flg = 0;
@@ -1020,8 +1022,8 @@ class directory_featured_homepage_listing extends WP_Widget {
                     $wp_query->set('is_ajax_archive', 1);
                     $wp_query->set('is_related', 1);
                     if (function_exists('icl_register_string')) {
-                              icl_register_string(DIR_DOMAIN, $widget_id . 'view_link' . $text, $link);
-                              $link = icl_t(DIR_DOMAIN, $widget_id . 'view_link' . $text, $link);
+                              icl_register_string('templatic', $widget_id . 'view_link' . $text, $link);
+                              $link = icl_t('templatic', $widget_id . 'view_link' . $text, $link);
                     }
                     
                     if ($my_query->have_posts()):
@@ -1035,15 +1037,17 @@ class directory_featured_homepage_listing extends WP_Widget {
                             <?php
                                 /*  for translation for widget text  */
                                 if (function_exists('icl_register_string')) {
-                                          icl_register_string(DIR_DOMAIN, 'directory' . $text, $text);
-                                          $text = icl_t(DIR_DOMAIN, 'directory' . $text, $text);
+                                          icl_register_string('templatic', 'directory' . $text, $text);
+                                          $text = icl_t('templatic', 'directory' . $text, $text);
                                 }
                                 echo $text;
                                 ?>
                             </a>
                             <?php } ?>
                           </h3>
-                          <?php } ?>
+                          <?php }
+							do_action('tmpl_after_hdp_widget_title',$instance);	
+						  ?>
                           <!-- widget_loop_taxonomy_wrap START -->
                           <section id="loop_listing_taxonomy" class="widget_loop_taxonomy_wrap  <?php echo $view ?>">
                             <?php
@@ -1194,7 +1198,7 @@ class directory_featured_homepage_listing extends WP_Widget {
                               $k++;
                     }
 
-                    $instance = wp_parse_args((array) $instance, array('title' => __("Featured Listing", 'templatic-admin'), 'category' => '', 'number' => 5, 'post_type' => $posttype, 'link' => '#', 'text' => __("View All", 'templatic-admin'), 'view' => 'list', 'read_more' => ''));
+                    $instance = wp_parse_args((array) $instance, apply_filters('tmpl_instance_hdw',array('title' => __("Featured Listing", 'templatic-admin'), 'category' => '', 'number' => 5, 'post_type' => $posttype, 'link' => '#', 'text' => __("View All", 'templatic-admin'), 'view' => 'list', 'read_more' => '')));
 
                     $title = strip_tags($instance['title']);
                     $category = $instance['category'];
@@ -1219,6 +1223,7 @@ class directory_featured_homepage_listing extends WP_Widget {
     <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" />
   </label>
 </p>
+<?php $obj = $this; do_action('tmpl_hdp_after_title',$instance,$obj); ?>
 <p>
   <label for="<?php echo $this->get_field_id('text'); ?>"><?php echo __('View All Text', 'templatic-admin'); ?>:
     <input class="widefat" id="<?php echo $this->get_field_id('text'); ?>" name="<?php echo $this->get_field_name('text'); ?>" type="text" value="<?php echo esc_attr($text); ?>" />
@@ -1286,10 +1291,10 @@ class directory_featured_homepage_listing extends WP_Widget {
   </select>
 </p>
 <p>
-  <label for="<?php echo $this->get_field_id('sorting_options'); ?>"><?php echo __('Sorting Options', ADMINDOMAIN) ?>:
+  <label for="<?php echo $this->get_field_id('sorting_options'); ?>"><?php echo __('Sorting Options', 'templatic-admin') ?>:
     <select id="<?php echo $this->get_field_id('sorting_options'); ?>" name="<?php echo $this->get_field_name('sorting_options'); ?>">
       <?php
-                                   $sorting_options = apply_filters('tmpl_homepage_sorting_options', array('alphabetical' => __('Alphabetical', ADMINDOMAIN), 'random' => __('Random', ADMINDOMAIN), 'date' => __('Published Date', ADMINDOMAIN), 'total_price' => __('Higher Paid First', ADMINDOMAIN), 'featured_listing' => __('Only Featured', ADMINDOMAIN), 'featured_first' => __('Featured First', ADMINDOMAIN)));
+                                   $sorting_options = apply_filters('tmpl_homepage_sorting_options', array('alphabetical' => __('Alphabetical', 'templatic-admin'), 'random' => __('Random', 'templatic-admin'), 'date' => __('Published Date', 'templatic-admin'), 'total_price' => __('Higher Paid First', 'templatic-admin'), 'featured_listing' => __('Only Featured', 'templatic-admin'), 'featured_first' => __('Featured First', 'templatic-admin')));
                                    if (get_option('default_comment_status') == 'open') {
                                              $sorting_options = array_merge($sorting_options, array('reviews' => 'Reviews/Comments'));
                                    }
@@ -1350,4 +1355,5 @@ function wp_ajax_callwidget_post_type_category() {
           echo $select_option;
           exit;
 }
+/* EOF */
 ?>

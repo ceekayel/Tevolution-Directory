@@ -146,7 +146,7 @@ global $posts,$htmlvar_name;
           	endwhile;
 			wp_reset_query(); 
 		else:?>
-          	<p class='nodata_msg'><?php _e( 'Apologies, but no results were found for the requested archive.', DIR_DOMAIN ); ?></p>              
+          	<p class='nodata_msg'><?php _e( 'Apologies, but no results were found for the requested archive.', 'templatic' ); ?></p>              
         <?php endif; 
         
         /* pagination start */

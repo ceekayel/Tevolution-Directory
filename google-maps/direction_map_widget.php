@@ -4,8 +4,8 @@ class widget_googlemap_diection_widget extends WP_Widget {
 
 	function widget_googlemap_diection_widget() {	
 		$widget_ops = array('classname' => 'widget googlemap direction widget
-		widget', 'description' => __('Shows a map of the posts location. By entering their address, visitors can also get directions to the location. Use the widget in detail page sidebar areas.',DOMAIN) );		
-		$this->WP_Widget('widget_googlemap_diection_widget', __('T &rarr; Detail Page Map',DOMAIN), $widget_ops);
+		widget', 'description' => __('Shows a map of the posts location. By entering their address, visitors can also get directions to the location. Use the widget in detail page sidebar areas.','templatic') );		
+		$this->WP_Widget('widget_googlemap_diection_widget', __('T &rarr; Detail Page Map','templatic'), $widget_ops);
 	}
 	function widget($args, $instance) {
 		global $current_cityinfo;
@@ -23,7 +23,8 @@ class widget_googlemap_diection_widget extends WP_Widget {
 			$address = get_post_meta($post->ID,'address',true);
 			$map_type =get_post_meta($post->ID,'map_view',true);			
 			$templatic_settings=get_option('templatic_settings');
-			if($address && $templatic_settings['direction_map']!='yes'){	
+			if($address && $templatic_settings['direction_map']!='yes'){
+			do_action('tmpl_before_detailpage_map_widget');	
 				echo $args['before_widget'];
 			?>
 				   <div id="tevolution_location_map" class="widget">
@@ -32,6 +33,7 @@ class widget_googlemap_diection_widget extends WP_Widget {
 						</div>  <!-- google map #end -->
 				   </div>
 			<?php
+				do_action('tmpl_after_detailpage_map_widget');	
 				echo $args['after_widget'];
 			}
 		}
@@ -52,7 +54,7 @@ class widget_googlemap_diection_widget extends WP_Widget {
 		?>
 	
 		<p>
-		 <label for="<?php echo $this->get_field_id('heigh'); ?>"><?php echo __('Map Height <small>(default height: 425px) to change, only enter a numeric value.)</small>',ADMINDOMAIN);?>:
+		 <label for="<?php echo $this->get_field_id('heigh'); ?>"><?php echo __('Map Height <small>(default height: 425px) to change, only enter a numeric value.)</small>','templatic-admin');?>:
 		 <input class="widefat" id="<?php echo $this->get_field_id('heigh'); ?>" name="<?php echo $this->get_field_name('heigh'); ?>" type="text" value="<?php echo esc_attr($heigh); ?>" />
 		 </label>
 	    </p>
